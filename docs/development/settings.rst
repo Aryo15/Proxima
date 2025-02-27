@@ -5,7 +5,7 @@ Settings
 
 This part covers which setting fields are available.
 This is especially useful if you plan on develop a plugin a want to contribute
-to FlaskBB.
+to Ekaayam.
 
 
 

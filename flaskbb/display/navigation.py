@@ -3,9 +3,9 @@
 flaskbb.display.navigation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Helpers to create navigation elements in FlaskBB Templates
+Helpers to create navigation elements in Ekaayam Templates
 
-:copyright: (c) 2018 the FlaskBB Team
+:copyright: (c) 2018 the Ekaayam Team
 :license: BSD, see LICENSE for more details
 """
 
@@ -46,7 +46,7 @@ class NavigationItem(ABC):
 @attr.s(eq=True, order=True, hash=True, repr=True, frozen=True, slots=True)
 class NavigationLink(NavigationItem):
     """
-    Representation of an internal FlaskBB navigation link::
+    Representation of an internal Ekaayam navigation link::
 
         NavigationLink(
             endpoint="user.profile",

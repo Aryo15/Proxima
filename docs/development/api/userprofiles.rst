@@ -3,7 +3,7 @@
 User Profiles
 =============
 
-FlaskBB exposes several interfaces, hooks and validators to customize
+Ekaayam exposes several interfaces, hooks and validators to customize
 user profile updates, as well as several implementations for these. For
 details on the hooks see :ref:`hooks`
 

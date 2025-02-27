@@ -1,4 +1,4 @@
-# FlaskBB's Default Theme
+# Ekaayam's Default Theme
 
 Make sure that you have npm (nodejs) installed. You can get it from
 [here](https://nodejs.org).

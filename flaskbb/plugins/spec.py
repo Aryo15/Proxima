@@ -3,9 +3,9 @@
 flaskbb.plugins.spec
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-This module provides the core FlaskBB plugin hook definitions
+This module provides the core Ekaayam plugin hook definitions
 
-:copyright: (c) 2017 by the FlaskBB Team.
+:copyright: (c) 2017 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -156,10 +156,10 @@ def flaskbb_load_post_markdown_plugins(plugins, app):
         @impl
         def flaskbb_load_post_markdown_plugins(plugins):
             try:
-                # remove the FlaskBB user mention link plugin
+                # remove the Ekaayam user mention link plugin
                 plugins.remove(plugin_userify)
             except ValueError:
-                # other FlaskBB plugins might beat you to removing a plugin,
+                # other Ekaayam plugins might beat you to removing a plugin,
                 # which is not an error. You should not raise an exception in
                 # this case.
                 pass
@@ -173,7 +173,7 @@ def flaskbb_load_post_markdown_plugins(plugins, app):
         https://mistune.readthedocs.io/en/v2.0.2/advanced.html#create-plugins
             Mistune plugin documentation.
         :data:`~flaskbb.markup.plugin_userify`
-            FlaskBB-provided plugin that links user mentions to their profiles.
+            Ekaayam-provided plugin that links user mentions to their profiles.
         :data:`~flaskbb.markup.DEFAULT_PLUGINS`
             List of plugins loaded by default.
         :func:`flaskbb_load_nonpost_markdown_plugins`
@@ -213,7 +213,7 @@ def flaskbb_cli(cli, app):
             return testplugin
 
     :param app: The application object.
-    :param cli: The FlaskBBGroup CLI object.
+    :param cli: The EkaayamGroup CLI object.
     """
 
 
@@ -360,7 +360,7 @@ def flaskbb_registration_post_processor(user):
 
 @spec(firstresult=True)
 def flaskbb_authenticate(identifier, secret):
-    """Hook for authenticating users in FlaskBB.
+    """Hook for authenticating users in Ekaayam.
     This hook should return either an instance of
     :class:`flaskbb.user.models.User` or None.
 
@@ -370,7 +370,7 @@ def flaskbb_authenticate(identifier, secret):
     and include a reason why authentication was stopped.
 
 
-    Only the first User result will used and the default FlaskBB
+    Only the first User result will used and the default Ekaayam
     authentication is tried last to give others an attempt to
     authenticate the user instead.
 
@@ -482,7 +482,7 @@ def flaskbb_authentication_failed(identifier):
 
 @spec(firstresult=True)
 def flaskbb_reauth_attempt(user, secret):
-    """Hook for handling reauth in FlaskBB
+    """Hook for handling reauth in Ekaayam
 
     These hooks receive the currently authenticated user
     and the entered secret. Only the first response from
@@ -871,7 +871,7 @@ def flaskbb_tpl_profile_settings_menu(user):
                 ('user.change_password', 'Change Password')
             ]
 
-    Hookwrappers for this spec should not be registered as FlaskBB
+    Hookwrappers for this spec should not be registered as Ekaayam
     supplies its own hookwrapper to flatten all the lists into a single list.
 
     in :file:`templates/user/settings_layout.html`
@@ -916,7 +916,7 @@ def flaskbb_tpl_profile_sidebar_links(user):
 
 
     .. warning::
-        Hookwrappers for this spec should not be registered as FlaskBB registers
+        Hookwrappers for this spec should not be registered as Ekaayam registers
         its own hook wrapper to flatten all the results into a single list.
 
     .. versionadded:: 2.1
@@ -945,7 +945,7 @@ def flaskbb_tpl_admin_settings_menu(user):
                     ("myplugin.foobar", "Foobar", "fa fa-foobar")
                 ]
 
-    Hookwrappers for this spec should not be registered as FlaskBB
+    Hookwrappers for this spec should not be registered as Ekaayam
     supplies its own hookwrapper to flatten all the lists into a single list.
 
     in :file:`templates/management/management_layout.html`
@@ -974,7 +974,7 @@ def flaskbb_tpl_admin_settings_sidebar(user):
 
     Only admins can view the Settings tab.
 
-    Hookwrappers for this spec should not be registered as FlaskBB
+    Hookwrappers for this spec should not be registered as Ekaayam
     supplies its own hookwrapper to flatten all the lists into a single list.
 
     in :file:`templates/management/settings.html`

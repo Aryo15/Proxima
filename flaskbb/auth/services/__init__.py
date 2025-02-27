@@ -3,11 +3,11 @@
 flaskbb.auth.services
 ~~~~~~~~~~~~~~~~~~~~~
 Public module of implemenations of auth related services
-in FlaskBB. If you are developing a plugin or extending
-FlaskBB, you should import from this module rather than
+in Ekaayam. If you are developing a plugin or extending
+Ekaayam, you should import from this module rather than
 submodules.
 
-:copyright: (c) 2014-2018 the FlaskBB Team.
+:copyright: (c) 2014-2018 the Ekaayam Team.
 :license: BSD, see LICENSE for more details
 """
 
@@ -15,7 +15,7 @@ from .activation import AccountActivator
 from .authentication import (
     BlockTooManyFailedLogins,
     BlockUnactivatedUser,
-    DefaultFlaskBBAuthProvider,
+    DefaultEkaayamAuthProvider,
     FailedLoginConfiguration,
     MarkFailedLogin,
     PluginAuthenticationManager,
@@ -41,7 +41,7 @@ __all__ = (
     "authentication_manager_factory",
     "BlockTooManyFailedLogins",
     "BlockUnactivatedUser",
-    "DefaultFlaskBBAuthProvider",
+    "DefaultEkaayamAuthProvider",
     "EmailUniquenessValidator",
     "FailedLoginConfiguration",
     "MarkFailedLogin",

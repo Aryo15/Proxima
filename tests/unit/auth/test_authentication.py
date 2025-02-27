@@ -55,8 +55,8 @@ class TestBlockTooManyFailedLogins(object):
         self.provider.authenticate("completely@made.up", "not considered")
 
 
-class TestDefaultFlaskBBAuthProvider(object):
-    provider = auth.DefaultFlaskBBAuthProvider()
+class TestDefaultEkaayamAuthProvider(object):
+    provider = auth.DefaultEkaayamAuthProvider()
 
     def test_returns_None_if_user_doesnt_exist(self, Fred):
         result = self.provider.authenticate("completely@made.up", "lolnope")

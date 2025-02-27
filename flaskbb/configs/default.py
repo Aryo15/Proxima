@@ -3,10 +3,10 @@
 flaskbb.configs.default
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-This is the default configuration for FlaskBB that every site should have.
+This is the default configuration for Ekaayam that every site should have.
 You can override these configuration variables in another class.
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -40,7 +40,7 @@ class DefaultConfig(object):
     # which we need in order to generate URLs (with the celery application)
     # Note that localhost does not support subdomains so setting this to
     # “localhost” does not help.
-    # Example for the FlaskBB forums: SERVER_NAME = "forums.flaskbb.org"
+    # Example for the Ekaayam forums: SERVER_NAME = "forums.flaskbb.org"
     # SERVER_NAME =
 
     # The preferred url scheme. In a productive environment it is highly
@@ -57,7 +57,7 @@ class DefaultConfig(object):
     # Logging Settings
     # ------------------------------
     # This config section will deal with the logging settings
-    # for FlaskBB, adjust as needed.
+    # for Ekaayam, adjust as needed.
 
     # Logging Config Path
     # see https://docs.python.org/library/logging.config.html#logging.config.fileConfig
@@ -135,7 +135,7 @@ class DefaultConfig(object):
     }
 
     # When set to True this will enable the default
-    # FlaskBB logging configuration which uses the settings
+    # Ekaayam logging configuration which uses the settings
     # below to determine logging
     USE_DEFAULT_LOGGING = True
 
@@ -271,7 +271,7 @@ class DefaultConfig(object):
         "broker_transport_options": {"max_retries": 1},
     }
 
-    # FlaskBB Settings
+    # Ekaayam Settings
     # ------------------------------ #
     # URL Prefixes
     FORUM_URL_PREFIX = ""

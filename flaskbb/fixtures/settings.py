@@ -5,7 +5,7 @@ flaskbb.fixtures.settings
 
 The fixtures module for our settings.
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -29,7 +29,7 @@ fixture = (
                 (
                     "project_title",
                     {
-                        "value": "FlaskBB",
+                        "value": "Ekaayam",
                         "value_type": SettingValueType.string,
                         "name": "Project title",
                         "description": "The title of the project.",
@@ -38,7 +38,7 @@ fixture = (
                 (
                     "project_subtitle",
                     {
-                        "value": "A lightweight forum software in Flask",
+                        "value": "The One Dimension in Everyhing",
                         "value_type": SettingValueType.string,
                         "name": "Project subtitle",
                         "description": "A short description of the project.",
@@ -50,7 +50,7 @@ fixture = (
                         "value": "",
                         "value_type": SettingValueType.string,
                         "name": "Project Copyright",
-                        "description": "Copyright notice of the Project like '&copy; 2018 FlaskBB'. Leave blank to ignore.",  # noqa
+                        "description": "Copyright notice of the Project like '&copy; 2018 Ekaayam'. Leave blank to ignore.",  # noqa
                     },
                 ),
                 (

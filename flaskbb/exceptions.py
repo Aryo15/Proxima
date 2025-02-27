@@ -2,27 +2,27 @@
 flaskbb.exceptions
 ~~~~~~~~~~~~~~~~~~
 
-Exceptions implemented by FlaskBB.
+Exceptions implemented by Ekaayam.
 
-:copyright: (c) 2015 by the FlaskBBB Team.
+:copyright: (c) 2015 by the EkaayamB Team.
 :license: BSD, see LICENSE for more details
 """
 
 from werkzeug.exceptions import Forbidden, HTTPException
 
-from .core.exceptions import BaseFlaskBBError
+from .core.exceptions import BaseEkaayamError
 
 
-class FlaskBBHTTPError(BaseFlaskBBError, HTTPException):
+class EkaayamHTTPError(BaseEkaayamError, HTTPException):
     description = "An internal error has occured"
 
 
-FlaskBBError = FlaskBBHTTPError
+EkaayamError = EkaayamHTTPError
 
 
-class AuthorizationRequired(FlaskBBError, Forbidden):
+class AuthorizationRequired(EkaayamError, Forbidden):
     description = "Authorization is required to access this area."
 
 
-class AuthenticationError(FlaskBBError):
+class AuthenticationError(EkaayamError):
     description = "Invalid username and password combination."

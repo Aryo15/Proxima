@@ -5,7 +5,7 @@ flaskbb.cli.plugins
 
 This module contains all plugin commands.
 
-:copyright: (c) 2016 by the FlaskBB Team.
+:copyright: (c) 2016 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -140,7 +140,7 @@ def uninstall(plugin_name):
 @plugins.command("cleanup")
 @with_appcontext
 def cleanup():
-    """Removes zombie plugins from FlaskBB.
+    """Removes zombie plugins from Ekaayam.
 
     A zombie plugin is a plugin
     which exists in the database but isn't installed in the env anymore.
@@ -148,7 +148,7 @@ def cleanup():
     deleted_plugins = remove_zombie_plugins_from_db()
     if len(deleted_plugins) > 0:
         click.secho(
-            "[+] Removed following zombie plugins from FlaskBB: ", fg="green", nl=False
+            "[+] Removed following zombie plugins from Ekaayam: ", fg="green", nl=False
         )
         click.secho("{}".format(", ".join(deleted_plugins)))
     else:
@@ -168,7 +168,7 @@ def cleanup():
     "-o",
     type=click.Path(),
     default=None,
-    help="The location for the new FlaskBB plugin.",
+    help="The location for the new Ekaayam plugin.",
 )
 @click.option(
     "--force",

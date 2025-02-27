@@ -5,7 +5,7 @@ flaskbb.utils.database
 
 Some database helpers such as a CRUD mixin.
 
-:copyright: (c) 2015 by the FlaskBB Team.
+:copyright: (c) 2015 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

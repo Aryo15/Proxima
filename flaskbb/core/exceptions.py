@@ -5,20 +5,20 @@ flaskbb.core.exceptions
 
 Exceptions raised by flaskbb.core,
 forms the root of all exceptions in
-FlaskBB.
+Ekaayam.
 
-:copyright: (c) 2014-2018 the FlaskBB Team
+:copyright: (c) 2014-2018 the Ekaayam Team
 :license: BSD, see LICENSE for more details
 """
 
 
-class BaseFlaskBBError(Exception):
+class BaseEkaayamError(Exception):
     """
-    Root exception for FlaskBB.
+    Root exception for Ekaayam.
     """
 
 
-class ValidationError(BaseFlaskBBError):
+class ValidationError(BaseEkaayamError):
     """
     Used to signal validation errors for things such as
     token verification, user registration, etc.
@@ -36,7 +36,7 @@ class ValidationError(BaseFlaskBBError):
         super(ValidationError, self).__init__((attribute, reason))
 
 
-class StopValidation(BaseFlaskBBError):
+class StopValidation(BaseEkaayamError):
     """
     Raised from validation handlers to signal that
     validation should end immediately and no further
@@ -54,7 +54,7 @@ class StopValidation(BaseFlaskBBError):
         super(StopValidation, self).__init__(reasons)
 
 
-class PersistenceError(BaseFlaskBBError):
+class PersistenceError(BaseEkaayamError):
     """
     Used to catch down errors when persisting models to the database instead
     of letting all issues percolate up, this should be raised from those

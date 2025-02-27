@@ -5,7 +5,7 @@ flaskbb.utils.views
 
 This module contains some helpers for creating views.
 
-:copyright: (c) 2016 by the FlaskBB Team.
+:copyright: (c) 2016 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

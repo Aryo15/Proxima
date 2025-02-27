@@ -1,6 +1,6 @@
-from flaskbb.markup import DEFAULT_PLUGINS, FlaskBBRenderer, make_renderer
+from flaskbb.markup import DEFAULT_PLUGINS, EkaayamRenderer, make_renderer
 
-markdown = make_renderer([FlaskBBRenderer], DEFAULT_PLUGINS)
+markdown = make_renderer([EkaayamRenderer], DEFAULT_PLUGINS)
 
 
 def test_userify():

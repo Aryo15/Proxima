@@ -5,7 +5,7 @@ flaskbb.utils.helpers
 
 A few helpers that are used by flaskbb
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

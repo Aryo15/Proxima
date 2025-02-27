@@ -6,7 +6,7 @@ flaskbb.plugins.utils
 This module provides registration and a basic DB backed key-value
 store for plugins.
 
-:copyright: (c) 2017 by the FlaskBB Team.
+:copyright: (c) 2017 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

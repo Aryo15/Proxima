@@ -5,7 +5,7 @@ flaskbb.cli.users
 
 This module contains all user commands.
 
-:copyright: (c) 2016 by the FlaskBB Team.
+:copyright: (c) 2016 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -16,7 +16,7 @@ import click
 from sqlalchemy.exc import IntegrityError
 
 from flaskbb.cli.main import flaskbb
-from flaskbb.cli.utils import EmailType, FlaskBBCLIError, prompt_save_user
+from flaskbb.cli.utils import EmailType, EkaayamCLIError, prompt_save_user
 from flaskbb.user.models import User
 
 
@@ -48,7 +48,7 @@ def new_user(username, email, password, group):
             fg="cyan",
         )
     except IntegrityError:
-        raise FlaskBBCLIError(
+        raise EkaayamCLIError(
             "Couldn't create the user because the "
             "username or email address is already taken.",
             fg="red",
@@ -70,7 +70,7 @@ def change_user(username, email, password, group):
 
     user = prompt_save_user(username, email, password, group, only_update=True)
     if user is None:
-        raise FlaskBBCLIError(
+        raise EkaayamCLIError(
             "The user with username {} does not exist.".format(username), fg="red"
         )
 
@@ -97,7 +97,7 @@ def delete_user(username, force):
 
     user = User.query.filter_by(username=username).first()
     if user is None:
-        raise FlaskBBCLIError(
+        raise EkaayamCLIError(
             "The user with username {} does not exist.".format(username), fg="red"
         )
 

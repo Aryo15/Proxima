@@ -4,7 +4,7 @@ flaskbb.auth.password
 
 Password reset manager
 
-:copyright: (c) 2014-2018 the FlaskBB Team.
+:copyright: (c) 2014-2018 the Ekaayam Team.
 :license: BSD, see LICENSE for more details
 """
 
@@ -18,7 +18,7 @@ from ...email import send_reset_token
 
 class ResetPasswordService(_ResetPasswordService):
     """
-    Default password reset handler for FlaskBB, manages the process through
+    Default password reset handler for Ekaayam, manages the process through
     email.
     """
 

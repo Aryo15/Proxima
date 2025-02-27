@@ -11,9 +11,9 @@ Installation
 Basic Setup
 -----------
 
-We recommend installing FlaskBB in an isolated Python environment using `virtualenv`_. In our little guide we will use a wrapper around
+We recommend installing Ekaayam in an isolated Python environment using `virtualenv`_. In our little guide we will use a wrapper around
 virtualenv - the `virtualenvwrapper`_. In addition to virtualenv, we will also
-use the package manager `pip`_ to install the dependencies for FlaskBB.
+use the package manager `pip`_ to install the dependencies for Ekaayam.
 
 
 Virtualenv Setup
@@ -92,7 +92,7 @@ We have one optional dependency, redis (the python package is installed
 automatically).
 If you want to use it, make sure that a redis-server is running.
 Redis will be used as the default result and caching backend for
-celery (celery is a task queue which FlaskBB uses to send non blocking emails).
+celery (celery is a task queue which Ekaayam uses to send non blocking emails).
 The feature for tracking the `online guests` and `online users` do also
 require redis (although `online users` works without redis as well).
 To install redis, just use your distributions package manager. For Arch Linux
@@ -120,7 +120,7 @@ Configuration
 Production
 ~~~~~~~~~~
 
-FlaskBB already sets some sane defaults, so you shouldn't have to change much.
+Ekaayam already sets some sane defaults, so you shouldn't have to change much.
 To make this whole process a little bit easier for you, we have created
 a little wizard which will ask you some questions and based on the answers that
 you provide, it will generate a configuration for you. You can of course
@@ -131,7 +131,7 @@ The setup wizard can be started with::
     flaskbb makeconfig
 
 
-To be able to run FlaskBB in production, the only settings 
+To be able to run Ekaayam in production, the only settings 
 that you need to modify are the following:
 
 - ``SERVER_NAME = "example.org"``
@@ -140,9 +140,9 @@ that you need to modify are the following:
 - ``SECRET_KEY = "secret key"``
 - ``WTF_CSRF_SECRET_KEY = "secret key"``
 
-By default it will try to save the configuration file with the name flaskbb.cfg in FlaskBB’s root folder.
+By default it will try to save the configuration file with the name flaskbb.cfg in Ekaayam’s root folder.
 
-Finally to get going – fire up FlaskBB!
+Finally to get going – fire up Ekaayam!
 ::
 
     flaskbb --config flaskbb.cfg run
@@ -172,7 +172,7 @@ or if you like to type a little bit more, the CLI::
     flaskbb --config flaskbb.cfg run
 
 You can either pass an import string to the path to the (python) config file you’ve just created, or a default config object. (Most users will follow the example above, which uses the generated file).
-This is how you do it by using an import string. Be sure that it is importable from within FlaskBB:
+This is how you do it by using an import string. Be sure that it is importable from within Ekaayam:
 
     flaskbb --config flaskbb.configs.default.DefaultConfig run
 
@@ -279,7 +279,7 @@ Deploying
 ---------
 
 This chapter will describe how to set up Supervisor + uWSGI + nginx for
-FlaskBB as well as document how to use the built-in WSGI server (gunicorn)
+Ekaayam as well as document how to use the built-in WSGI server (gunicorn)
 that can be used in a production environment.
 
 
@@ -376,12 +376,12 @@ It's a pre-fork worker model ported from Ruby's Unicorn project.
 The Gunicorn server is broadly compatible with various web frameworks,
 simply implemented, light on server resources, and fairly speedy.
 
-This is probably the easiest way to run a FlaskBB instance.
+This is probably the easiest way to run a Ekaayam instance.
 Just install gunicorn via pip inside your virtualenv::
 
     pip install gunicorn
 
-and run FlaskBB using the  ``gunicorn`` command::
+and run Ekaayam using the  ``gunicorn`` command::
 
     gunicorn wsgi:flaskbb --log-file logs/gunicorn.log --pid gunicorn.pid -w 4
 
@@ -393,7 +393,7 @@ nginx
 as well as a mail proxy server, written by Igor Sysoev.`
 
 The nginx config is pretty straightforward. Again, this is how I use it for
-`FlaskBB`. Just copy the snippet below and paste it to, for example
+`Ekaayam`. Just copy the snippet below and paste it to, for example
 ``/etc/nginx/sites-available/flaskbb``.
 The only thing left is, that you need to adjust the ``server_name`` to your
 domain and the paths in ``access_log``, ``error_log``. Also, don't forget to
@@ -468,14 +468,14 @@ Deploying to PythonAnywhere
 platform-as-a-service, which basically means they have a bunch of servers
 pre-configured with Python, nginx and uWSGI.
 You can run a low-traffic website with them for free,
-so it's an easy way to get quickly FlaskBB running publicly.
+so it's an easy way to get quickly Ekaayam running publicly.
 
 Here's what to do:
 
 * Sign up for a PythonAnywhere account at
   `https://www.pythonanywhere.com/ <https://www.pythonanywhere.com/>`_.
 * On the "Consoles" tab, start a Bash console and install/configure
-  FlaskBB like this
+  Ekaayam like this
 
 ::
 
@@ -485,7 +485,7 @@ Here's what to do:
 Before continuing the installation it is advised to create a virtualenv as is
 described in section `Virtualenv Setup <#virtualenv-setup>`_.
 
-Finish the installation of FlaskBB by executing following commands::
+Finish the installation of Ekaayam by executing following commands::
 
     pip3.5 install --user -r requirements.txt
     pip3.5 install --user -e .
@@ -521,7 +521,7 @@ to say
 * Click the green "Save" button near the top right.
 * Go back to the "Web" tab.
 * Click the green "Reload..." button.
-* Click the link to visit the site -- you'll have a new FlaskBB install!
+* Click the link to visit the site -- you'll have a new Ekaayam install!
 
 
 .. _virtualenv: https://virtualenv.pypa.io/en/latest/installation.html

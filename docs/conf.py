@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath("_themes"))
 
 
 # -- Project information -----------------------------------------------------
-project = "FlaskBB"
+project = "Ekaayam"
 copyright = "2021, Peter Justin"
 author = "Peter Justin"
 
@@ -56,7 +56,7 @@ html_theme_options = {
     "github_repo": "flaskbb",
     "github_type": "star",
     "description": (
-        "FlaskBB is a simple and extensible forum software " "for building communities."
+        "Ekaayam is a simple and extensible forum software " "for building communities."
     ),
     "fixed_sidebar": True,
     "show_related": True,
@@ -65,7 +65,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-html_title = "FlaskBB Documentation"
+html_title = "Ekaayam Documentation"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

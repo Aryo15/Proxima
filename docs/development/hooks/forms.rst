@@ -2,7 +2,7 @@
 
 .. currentmodule:: flaskbb.plugins.spec
 
-FlaskBB Form Hooks
+Ekaayam Form Hooks
 ==================
 
 .. autofunction:: flaskbb_form_post

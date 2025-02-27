@@ -5,7 +5,7 @@ flaskbb.cli.themes
 
 This module contains all theme commands.
 
-:copyright: (c) 2016 by the FlaskBB Team.
+:copyright: (c) 2016 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -62,7 +62,7 @@ def list_themes():
     "-o",
     type=click.Path(),
     default=None,
-    help="The location for the new FlaskBB theme.",
+    help="The location for the new Ekaayam theme.",
 )
 @click.option(
     "--force",

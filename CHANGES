@@ -44,7 +44,7 @@ Version 2.0.0
 Released on May 16th, 2018.
 
 * Improved management panel load time by requesting celery status async (PR #429)
-* Migrated FlaskBB internal behavior to use plugin hook system (PRs
+* Migrated Ekaayam internal behavior to use plugin hook system (PRs
   #369, #413, #419, #423, #426, #435, #436)
 * Migrated behavior in flaskbb.auth from living in route handlers and into
   services (PRs #421, #424)
@@ -54,14 +54,14 @@ Released on May 16th, 2018.
   (PR #414)
 * Fixed issue where user could not re-select having the default theme (PR #387)
 * Fixed issue where a reinstall would attempt to drop the entire database
-  instead of just the tables associated with FlaskBB (PR #364)
+  instead of just the tables associated with Ekaayam (PR #364)
 * Added ability to hide and unhide topics and posts, preventing unprivileged
   users from viewing them (PR #325)
 * Fixed issue where password was not required when editing a user in the admin
   panel (PR #321)
 * Migrated from Flask-Plugins to Pluggy as plugin system for plugins.
   Plugins are now loaded via entry points and thus have to be installed
-  into the same environment as FlaskBB. During this migration we also moved
+  into the same environment as Ekaayam. During this migration we also moved
   the [portal plugin](https://github.com/sh4nks/flaskbb-plugins) into its own
   python package which can be installed via
   ``pip install flaskbb-plugin-portal``. (PR #311)
@@ -69,7 +69,7 @@ Released on May 16th, 2018.
 * Improve logging. (PR #327)
 * Prefixes migrations with a timestamp which will sort them by creation date. (PR #353)
 * Transform views into Class-based Views. (PR #324)
-* Drop the tables instead of dropping the database when uninstalling FlaskBB. (PR #364)
+* Drop the tables instead of dropping the database when uninstalling Ekaayam. (PR #364)
 * Create the database using SQLAlchemy's ``db.create_all`` and stamp it as
   'latest' instead of going through all migrations.
 * Fixes a bug that prevented users to activate their accounts via the form
@@ -88,4 +88,4 @@ Version 1.0
 
 Released on May 5th, 2017.
 
-* First release of FlaskBB
+* First release of Ekaayam

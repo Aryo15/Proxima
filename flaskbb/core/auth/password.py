@@ -5,7 +5,7 @@ flaskbb.core.auth.password
 Interfaces and services for auth services
 related to password.
 
-:copyright: (c) 2014-2018 the FlaskBB Team.
+:copyright: (c) 2014-2018 the Ekaayam Team.
 :license: BSD, see LICENSE for more details
 """
 
@@ -14,7 +14,7 @@ from abc import ABC, abstractmethod
 
 class ResetPasswordService(ABC):
     """
-    Interface for managing the password reset experience in FlaskBB.
+    Interface for managing the password reset experience in Ekaayam.
     """
 
     @abstractmethod

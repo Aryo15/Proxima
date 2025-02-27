@@ -2,16 +2,16 @@
 """
 flaskbb.core.auth.authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-:copyright: (c) 2014-2018 the FlaskBB Team
+:copyright: (c) 2014-2018 the Ekaayam Team
 :license: BSD, see LICENSE for more details
 """
 
 from abc import ABC, abstractmethod
 
-from ..exceptions import BaseFlaskBBError
+from ..exceptions import BaseEkaayamError
 
 
-class StopAuthentication(BaseFlaskBBError):
+class StopAuthentication(BaseEkaayamError):
     """
     Used by Authentication providers to halt any further
     attempts to authenticate a user.
@@ -24,7 +24,7 @@ class StopAuthentication(BaseFlaskBBError):
         self.reason = reason
 
 
-class ForceLogout(BaseFlaskBBError):
+class ForceLogout(BaseEkaayamError):
     """
     Used to forcefully log a user out.
 
@@ -62,7 +62,7 @@ class AuthenticationManager(ABC):
 
 class AuthenticationProvider(ABC):
     """
-    Used to provide an authentication service for FlaskBB.
+    Used to provide an authentication service for Ekaayam.
 
     For example, an implementer may choose to use LDAP as an authentication
     source::
@@ -171,7 +171,7 @@ class PostAuthenticationHandler(ABC):
 
 class ReauthenticateManager(ABC):
     """
-    Used to handle the reauthentication process in FlaskBB. A default
+    Used to handle the reauthentication process in Ekaayam. A default
     implementation is provided, however this is interface exists in case
     alternative flows are desired.
 
@@ -247,7 +247,7 @@ class ReauthenticateProvider(ABC):
 
 class ReauthenticateFailureHandler(ABC):
     """
-    Used to manager reauthentication failures in FlaskBB.
+    Used to manager reauthentication failures in Ekaayam.
 
     ReauthenticateFailureHandlers are similiar to
     :class:`~flaskbb.core.auth.authentication.AuthenticationFailureHandler`

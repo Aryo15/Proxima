@@ -4,9 +4,9 @@ flaskbb.core.auth.tokens
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 This module provides ways of interacting
-with tokens in FlaskBB
+with tokens in Ekaayam
 
-:copyright: (c) 2014-2018 by the FlaskBB Team.
+:copyright: (c) 2014-2018 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details
 """
 
@@ -15,10 +15,10 @@ from abc import ABC, abstractmethod
 import attr
 from flask_babelplus import gettext as _
 
-from .exceptions import BaseFlaskBBError
+from .exceptions import BaseEkaayamError
 
 
-class TokenError(BaseFlaskBBError):
+class TokenError(BaseEkaayamError):
     """
     Raised when there is an issue with deserializing
     a token. Has helper classmethods to ensure
@@ -65,7 +65,7 @@ class TokenActions:
     .. note::
         This is just a class rather than an enum because enums cannot be
         extended at runtime which would limit the number of token actions
-        to the ones implemented by FlaskBB itself and block extension of
+        to the ones implemented by Ekaayam itself and block extension of
         tokens by plugins.
     """
 

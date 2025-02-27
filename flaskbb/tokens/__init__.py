@@ -3,10 +3,10 @@
 flaskbb.tokens
 ~~~~~~~~~~~~~~
 
-:copyright: 2014-2018 the FlaskBB Team
+:copyright: 2014-2018 the Ekaayam Team
 :license: BSD, see LICENSE for more details
 """
 
-from .serializer import FlaskBBTokenSerializer
+from .serializer import EkaayamTokenSerializer
 
-__all__ = ("FlaskBBTokenSerializer",)
+__all__ = ("EkaayamTokenSerializer",)

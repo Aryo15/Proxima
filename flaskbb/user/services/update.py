@@ -5,7 +5,7 @@ flaskbb.user.services.update
 
 User update services.
 
-:copyright: (c) 2018 the FlaskBB Team.
+:copyright: (c) 2018 the Ekaayam Team.
 :license: BSD, see LICENSE for more details
 """
 

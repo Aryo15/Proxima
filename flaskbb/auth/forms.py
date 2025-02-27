@@ -5,7 +5,7 @@ flaskbb.auth.forms
 
 It provides the forms that are needed for the auth views.
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -29,7 +29,7 @@ from wtforms.validators import (
 )
 
 from flaskbb.utils.fields import RecaptchaField
-from flaskbb.utils.forms import FlaskBBForm
+from flaskbb.utils.forms import EkaayamForm
 
 logger = logging.getLogger(__name__)
 
@@ -39,7 +39,7 @@ is_valid_username = regexp(
 )
 
 
-class LoginForm(FlaskBBForm):
+class LoginForm(EkaayamForm):
     login = StringField(
         _("Username or Email address"),
         validators=[
@@ -62,7 +62,7 @@ class LoginRecaptchaForm(LoginForm):
     recaptcha = RecaptchaField(_("Captcha"))
 
 
-class RegisterForm(FlaskBBForm):
+class RegisterForm(EkaayamForm):
     username = StringField(
         _("Username"),
         validators=[
@@ -102,7 +102,7 @@ class RegisterForm(FlaskBBForm):
     submit = SubmitField(_("Register"))
 
 
-class ReauthForm(FlaskBBForm):
+class ReauthForm(EkaayamForm):
     password = PasswordField(
         _("Password"),
         validators=[DataRequired(message=_("Please enter your password."))],
@@ -111,7 +111,7 @@ class ReauthForm(FlaskBBForm):
     submit = SubmitField(_("Refresh Login"))
 
 
-class ForgotPasswordForm(FlaskBBForm):
+class ForgotPasswordForm(EkaayamForm):
     email = StringField(
         _("Email address"),
         validators=[
@@ -125,7 +125,7 @@ class ForgotPasswordForm(FlaskBBForm):
     submit = SubmitField(_("Request Password"))
 
 
-class ResetPasswordForm(FlaskBBForm):
+class ResetPasswordForm(EkaayamForm):
     token = HiddenField("Token")
 
     email = StringField(
@@ -149,7 +149,7 @@ class ResetPasswordForm(FlaskBBForm):
     submit = SubmitField(_("Reset password"))
 
 
-class RequestActivationForm(FlaskBBForm):
+class RequestActivationForm(EkaayamForm):
     username = StringField(
         _("Username"),
         validators=[
@@ -169,7 +169,7 @@ class RequestActivationForm(FlaskBBForm):
     submit = SubmitField(_("Send Confirmation Mail"))
 
 
-class AccountActivationForm(FlaskBBForm):
+class AccountActivationForm(EkaayamForm):
     token = StringField(
         _("Email confirmation token"),
         validators=[DataRequired(_("Please enter the token we have sent to you."))],

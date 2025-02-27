@@ -5,7 +5,7 @@ flaskbb.utils.markup
 
 A module for all markup related stuff.
 
-:copyright: (c) 2016 by the FlaskBB Team.
+:copyright: (c) 2016 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -54,11 +54,11 @@ DEFAULT_PLUGINS = [
 ]
 
 
-class FlaskBBRenderer(mistune.HTMLRenderer):
+class EkaayamRenderer(mistune.HTMLRenderer):
     """Mistune renderer that uses pygments to apply code highlighting."""
 
     def __init__(self, **kwargs):
-        super(FlaskBBRenderer, self).__init__(**kwargs)
+        super(EkaayamRenderer, self).__init__(**kwargs)
 
     def block_code(self, code, info=None):
         if info:
@@ -76,12 +76,12 @@ class FlaskBBRenderer(mistune.HTMLRenderer):
 
 @impl
 def flaskbb_load_post_markdown_class():
-    return FlaskBBRenderer
+    return EkaayamRenderer
 
 
 @impl
 def flaskbb_load_nonpost_markdown_class():
-    return FlaskBBRenderer
+    return EkaayamRenderer
 
 
 @impl
@@ -100,7 +100,7 @@ def flaskbb_jinja_directives(app):
 
 
 def make_renderer(classes, plugins):
-    RenderCls = type("FlaskBBRenderer", tuple(classes), {})
+    RenderCls = type("EkaayamRenderer", tuple(classes), {})
 
     markup = mistune.create_markdown(
         renderer=RenderCls(), plugins=plugins, escape=True, hard_wrap=True

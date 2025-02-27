@@ -3,7 +3,7 @@
 Models
 ======
 
-FlaskBB uses SQLAlchemy as it's ORM. The models are split in three modules
+Ekaayam uses SQLAlchemy as it's ORM. The models are split in three modules
 which are covered below.
 
 
@@ -67,7 +67,7 @@ Management Models
 
 .. module:: flaskbb.management.models
 
-The management module contains all related models for the management of FlaskBB.
+The management module contains all related models for the management of Ekaayam.
 
 .. autoclass:: SettingsGroup
    :members:

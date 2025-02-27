@@ -27,7 +27,7 @@ frontend: ## Runs the webpack server which watches for changes in flaskbb/themes
 devconfig:dependencies ## Generates a development config
 	flaskbb makeconfig -d
 
-install:dependencies ## Installs the dependencies and FlaskBB
+install:dependencies ## Installs the dependencies and Ekaayam
 	flaskbb install
 
 docs: ## Builds the Sphinx docs
@@ -44,5 +44,5 @@ isort:  ## Sorts the python imports
 dist: ## Creates distribution packages (bdist_wheel, sdist)
 	python setup.py sdist bdist_wheel
 
-upload:dist ## Uploads a new version of FlaskBB to PyPI
+upload:dist ## Uploads a new version of Ekaayam to PyPI
 	twine upload --skip-existing dist/*

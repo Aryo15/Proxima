@@ -5,7 +5,7 @@ flaskbb.forum.models
 
 It provides the models for the forum
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

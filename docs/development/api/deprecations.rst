@@ -3,13 +3,13 @@
 Deprecation Helpers
 ===================
 
-FlaskBB publicly provides tools for handling deprecations and are open to use
-by plugins or other extensions to FlaskBB. For example if a plugin wants to
+Ekaayam publicly provides tools for handling deprecations and are open to use
+by plugins or other extensions to Ekaayam. For example if a plugin wants to
 deprecate a particular function it could do::
 
-    from flaskbb.deprecation import FlaskBBDeprecation, deprecated
+    from flaskbb.deprecation import EkaayamDeprecation, deprecated
 
-    class RemovedInPluginV2(FlaskBBDeprecation):
+    class RemovedInPluginV2(EkaayamDeprecation):
         version = (2, 0, 0)
 
 
@@ -44,7 +44,7 @@ Helpers
 
 .. module:: flaskbb.deprecation
 
-.. autoclass:: FlaskBBWarning
-.. autoclass:: FlaskBBDeprecation
-.. autoclass:: RemovedInFlaskBB3
+.. autoclass:: EkaayamWarning
+.. autoclass:: EkaayamDeprecation
+.. autoclass:: RemovedInEkaayam3
 .. autofunction:: deprecated

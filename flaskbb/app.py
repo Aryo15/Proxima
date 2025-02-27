@@ -5,7 +5,7 @@ flaskbb.app
 
 manages the app creation and configuration process
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -41,7 +41,7 @@ from flaskbb.extensions import (
     whooshee,
 )
 from flaskbb.plugins import spec
-from flaskbb.plugins.manager import FlaskBBPluginManager
+from flaskbb.plugins.manager import EkaayamPluginManager
 from flaskbb.plugins.models import PluginRegistry
 from flaskbb.plugins.utils import remove_zombie_plugins_from_db, template_hook
 
@@ -91,11 +91,11 @@ from flaskbb.utils.search import (
 
 # app specific configurations
 from flaskbb.utils.settings import flaskbb_config
-from flaskbb.utils.translations import FlaskBBDomain
+from flaskbb.utils.translations import EkaayamDomain
 
 from . import markup  # noqa
 from .auth import views as auth_views  # noqa
-from .deprecation import FlaskBBDeprecation
+from .deprecation import EkaayamDeprecation
 from .display.navigation import NavigationContentType
 from .forum import views as forum_views  # noqa
 from .management import views as management_views  # noqa
@@ -117,7 +117,7 @@ def create_app(config=None, instance_path=None):
                    For example, if the config is specified via an file
                    and a ENVVAR, it will load the config via the file and
                    later overwrite it from the ENVVAR.
-                   If no config is provided, FlaskBB will try to load the
+                   If no config is provided, Ekaayam will try to load the
                    config named ``flaskbb.cfg`` from the instance path.
     """
 
@@ -144,7 +144,7 @@ def create_app(config=None, instance_path=None):
 
 
 def configure_app(app, config):
-    """Configures FlaskBB."""
+    """Configures Ekaayam."""
     # Use the default config and override it afterwards
     app.config.from_object("flaskbb.configs.default.DefaultConfig")
     config = get_flaskbb_config(app, config)
@@ -199,7 +199,7 @@ def configure_app(app, config):
 
     # never set the deprecation level during testing, pytest will handle it
     if not app.testing:  # pragma: no branch
-        warnings.simplefilter(deprecation_level, FlaskBBDeprecation)
+        warnings.simplefilter(deprecation_level, EkaayamDeprecation)
 
     debug_panels = app.config.setdefault(
         "DEBUG_TB_PANELS",
@@ -220,7 +220,7 @@ def configure_app(app, config):
     if all("WarningsPanel" not in p for p in debug_panels):
         debug_panels.append("flask_debugtoolbar_warnings.WarningsPanel")
 
-    app.pluggy = FlaskBBPluginManager("flaskbb")
+    app.pluggy = EkaayamPluginManager("flaskbb")
 
 
 def configure_celery_app(app, celery):
@@ -416,7 +416,7 @@ def configure_translations(app):
 
     # we have to initialize the extension after we have loaded the plugins
     # because we of the 'flaskbb_load_translations' hook
-    babel.init_app(app=app, default_domain=FlaskBBDomain(app))
+    babel.init_app(app=app, default_domain=EkaayamDomain(app))
 
     @babel.localeselector
     def get_locale():
@@ -519,7 +519,7 @@ def load_plugins(app):
     unregistered = [
         PluginRegistry(name=name)
         for name in loaded_names - registered_names
-        # ignore internal FlaskBB modules
+        # ignore internal Ekaayam modules
         if not name.startswith("flaskbb.") and name != "flaskbb"
     ]
     with app.app_context():

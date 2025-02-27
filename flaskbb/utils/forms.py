@@ -5,7 +5,7 @@ flaskbb.utils.forms
 
 This module contains stuff for forms.
 
-:copyright: (c) 2017 by the FlaskBB Team.
+:copyright: (c) 2017 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -23,7 +23,7 @@ from wtforms import (
 )
 
 
-class FlaskBBForm(FlaskForm):
+class EkaayamForm(FlaskForm):
     def populate_errors(self, errors):
         for attribute, reason in errors:
             self.errors.setdefault(attribute, []).append(reason)
@@ -71,7 +71,7 @@ def generate_settings_form(settings):  # noqa: C901
     """Generates a settings form which includes field validation
     based on our Setting Schema."""
 
-    class SettingsForm(FlaskBBForm):
+    class SettingsForm(EkaayamForm):
         pass
 
     # now parse the settings in this group

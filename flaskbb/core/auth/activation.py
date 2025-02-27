@@ -3,9 +3,9 @@
 flaskbb.core.auth.activation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Interfaces for handling account activation
-in FlaskBB
+in Ekaayam
 
-:copyright: (c) 2014-2018 the FlaskBB Team
+:copyright: (c) 2014-2018 the Ekaayam Team
 :license: BSD, see LICENSE for more details
 """
 

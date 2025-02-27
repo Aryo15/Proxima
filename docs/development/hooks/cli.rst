@@ -2,7 +2,7 @@
 
 .. currentmodule:: flaskbb.plugins.spec
 
-FlaskBB CLI Hooks
+Ekaayam CLI Hooks
 =================
 
 These hooks are only invoked when using the ``flaskbb``

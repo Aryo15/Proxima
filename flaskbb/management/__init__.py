@@ -4,9 +4,9 @@ flaskbb.management
 ~~~~~~~~~~~~~~~~~~
 
 This module contains models, forms and views relevant
-for managing FlaskBB
+for managing Ekaayam
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

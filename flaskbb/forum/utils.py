@@ -3,9 +3,9 @@
 flaskbb.forum.utils
 ~~~~~~~~~~~~~~~~~~~
 
-Utilities specific to the FlaskBB forums module
+Utilities specific to the Ekaayam forums module
 
-:copyright: (c) 2018 the FlaskBB Team
+:copyright: (c) 2018 the Ekaayam Team
 :license: BSD, see LICENSE for more details
 """
 

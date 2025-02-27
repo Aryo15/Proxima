@@ -1,6 +1,6 @@
 /**
  * flaskbb.js
- * Copyright: (C) 2015 - FlaskBB Team
+ * Copyright: (C) 2015 - Ekaayam Team
  * License: BSD - See LICENSE for more details.
  */
 import { Modal } from "bootstrap";

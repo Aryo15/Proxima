@@ -4,7 +4,7 @@ Registration
 ============
 
 These interfaces and implementations control the user registration flow in
-FlaskBB.
+Ekaayam.
 
 Registration Interfaces
 -----------------------

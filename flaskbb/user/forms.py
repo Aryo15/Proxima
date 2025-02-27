@@ -5,7 +5,7 @@ flaskbb.user.forms
 
 It provides the forms that are needed for the user views.
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -30,7 +30,7 @@ from wtforms.validators import (
     Optional,
 )
 
-from flaskbb.utils.forms import FlaskBBForm
+from flaskbb.utils.forms import EkaayamForm
 
 from ..core.user.update import (
     EmailUpdate,
@@ -42,7 +42,7 @@ from ..core.user.update import (
 logger = logging.getLogger(__name__)
 
 
-class GeneralSettingsForm(FlaskBBForm):
+class GeneralSettingsForm(EkaayamForm):
     # The choices for those fields will be generated in the user view
     # because we cannot access the current_app outside of the context
     language = SelectField(_("Language"))
@@ -53,7 +53,7 @@ class GeneralSettingsForm(FlaskBBForm):
         return SettingsUpdate(language=self.language.data, theme=self.theme.data)
 
 
-class ChangeEmailForm(FlaskBBForm):
+class ChangeEmailForm(EkaayamForm):
     old_email = StringField(
         _("Old email address"),
         validators=[
@@ -84,7 +84,7 @@ class ChangeEmailForm(FlaskBBForm):
         return EmailUpdate(old_email=self.old_email.data, new_email=self.new_email.data)
 
 
-class ChangePasswordForm(FlaskBBForm):
+class ChangePasswordForm(EkaayamForm):
     old_password = PasswordField(
         _("Password"),
         validators=[DataRequired(message=_("Please enter your password."))],
@@ -105,7 +105,7 @@ class ChangePasswordForm(FlaskBBForm):
         )
 
 
-class ChangeUserDetailsForm(FlaskBBForm):
+class ChangeUserDetailsForm(EkaayamForm):
     birthday = DateField(_("Birthday"), format="%Y-%m-%d", validators=[Optional()])
     gender = StringField(_("Gender"), validators=[Optional()])
     location = StringField(_("Location"), validators=[Optional()])

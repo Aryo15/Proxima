@@ -10,7 +10,7 @@ pytestmark = pytest.mark.usefixtures("default_settings")
 
 
 def test_can_round_trip_token():
-    serializer = tokens.FlaskBBTokenSerializer(
+    serializer = tokens.EkaayamTokenSerializer(
         "hello i am secret", timedelta(seconds=100)
     )
     token = Token(user_id=1, operation=TokenActions.RESET_PASSWORD)
@@ -20,7 +20,7 @@ def test_can_round_trip_token():
 
 
 def test_raises_token_error_with_bad_data():
-    serializer = tokens.FlaskBBTokenSerializer(
+    serializer = tokens.EkaayamTokenSerializer(
         "hello i am also secret", timedelta(seconds=100)
     )
 
@@ -30,7 +30,7 @@ def test_raises_token_error_with_bad_data():
 
 
 def test_expired_token_raises():
-    serializer = tokens.FlaskBBTokenSerializer(
+    serializer = tokens.EkaayamTokenSerializer(
         "i am a secret not", expiry=datetime.utcnow() + timedelta(seconds=1)
     )
     dumped_token = serializer.dumps(
@@ -46,5 +46,5 @@ def test_expired_token_raises():
 
 def test_raises_typeerror_expiry_args():
     with pytest.raises(TypeError) as excinfo:
-        tokens.FlaskBBTokenSerializer("hello i am also secret", 100)
+        tokens.EkaayamTokenSerializer("hello i am also secret", 100)
         assert "timedelta or datetime" in excinfo.value

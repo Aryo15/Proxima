@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="FlaskBB is a forum software written in Flask">
-    <meta name="author" content="FlaskBB Team">
+    <meta name="description" content="Ekaayam is a forum software written in Flask">
+    <meta name="author" content="Ekaayam Team">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
@@ -19,14 +19,16 @@
         {% endblock %}
     </title>
 
-    {% block stylesheets %}
-    <!-- style -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
-    {% endblock %}
+{# Original code #}
+{% block stylesheets %}
+<!-- style -->
+<link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+{% endblock %}
 
-    {# for extra stylesheets. e.q. a template has to add something #}
-    {% block css %}
-    {% endblock %}
+{# MODIFIED SECTION - Add this #}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+{% endblock %}
 
     {# for various extra things #}
     {% block head_extra %}
@@ -200,10 +202,10 @@
                     </div>
                     <div class="col-8 col-sm-6">
                         <div class="text-muted text-end">
-                            powered by <a href="https://flaskbb.org">FlaskBB</a>
+                            powered by <a href="https://ekaayam.com">Ekaayam</a>
                         </div>
                         <div class="text-muted text-end">
-                            &copy; 2013 - {{ now.year }} <a href="https://flaskbb.org">FlaskBB Team</a>
+                            &copy; 2013 - {{ now.year }} <a href="https://ekaayam.com">Ekaayam Team</a>
                         </div>
                     </div>
                 </div>

@@ -3,8 +3,8 @@
 flaskbb.cli
 ~~~~~~~~~~~
 
-FlaskBB's Command Line Interface.
-To make it work, you have to install FlaskBB via ``pip install -e .``.
+Ekaayam's Command Line Interface.
+To make it work, you have to install Ekaayam via ``pip install -e .``.
 
 Plugin and Theme templates are generated via cookiecutter.
 In order to generate those project templates you have to
@@ -12,7 +12,7 @@ cookiecutter first::
 
     pip install cookiecutter
 
-:copyright: (c) 2016 by the FlaskBB Team.
+:copyright: (c) 2016 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

@@ -1,4 +1,4 @@
-FlaskBB includes code adapted from other Python libaries or resources, including:
+Ekaayam includes code adapted from other Python libaries or resources, including:
 
 sqlalchemy-soft-delete (https://github.com/miguelgrinberg/sqlalchemy-soft-delete) license
 =========================================================================================

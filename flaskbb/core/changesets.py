@@ -5,7 +5,7 @@ flaskbb.core.changesets
 
 Core interfaces for handlers, services, etc.
 
-:copyright: (c) 2018 the FlaskBB Team
+:copyright: (c) 2018 the Ekaayam Team
 :license: BSD, see LICENSE for more details
 """
 

@@ -2,9 +2,9 @@
 {% set active_forum_nav=True %}
 
 {% extends theme("layout.html") %}
-{% block content %}
+{% block content %}s
 
-<div class="index-view">
+<div class="index-view" style="background-color: transparent;>
     <ol class="breadcrumb flaskbb-breadcrumb bg-light">
         <li class="breadcrumb-item"><a href="{{ url_for('forum.index') }}">{% trans %}Forum{% endtrans %}</a></li>
         <li class="breadcrumb-item active">{{ category.title }}</li>

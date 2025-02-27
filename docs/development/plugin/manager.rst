@@ -4,7 +4,7 @@
 Plugin Management
 =================
 
-FlaskBB provides a couple of helpers for helping with plugin management.
+Ekaayam provides a couple of helpers for helping with plugin management.
 
 
 Plugin Registry
@@ -25,7 +25,7 @@ You can query it like any SQLAlchemy Model::
 
 Plugin Manager
 --------------
-FlaskBB overrides the PluginManager from pluggy to provide some additional
+Ekaayam overrides the PluginManager from pluggy to provide some additional
 functionality like accessing the information stored in a setup.py file. The
 plugin manager will only list the currently enabled plugins and can be used to
 directly access the plugins instance by its name.
@@ -36,6 +36,6 @@ Accessing a plugins instance is as easy as::
     plugin_instance = current_app.pluggy.get_plugin(name)
 
 
-.. autoclass:: flaskbb.plugins.manager.FlaskBBPluginManager
+.. autoclass:: flaskbb.plugins.manager.EkaayamPluginManager
     :members:
     :inherited-members:

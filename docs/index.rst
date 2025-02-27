@@ -1,11 +1,11 @@
 :orphan:
 
-Welcome to FlaskBB
+Welcome to Ekaayam
 ==================
 
-FlaskBB is a classic forum software in a modern and fresh look.
+Ekaayam is a classic forum software in a modern and fresh look.
 It is written in Python using the web framework Flask.
-FlaskBB is being distributed under the BSD 3-Clause License.
+Ekaayam is being distributed under the BSD 3-Clause License.
 
 
 Links

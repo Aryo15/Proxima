@@ -6,7 +6,7 @@ We love contributions from everyone.
 ## Support Questions
 
 Don't use the GitHub's Issue tracker for general Python and Flask related
-questions. For FlaskBB it is ok _for now_. ``#python`` and
+questions. For Ekaayam it is ok _for now_. ``#python`` and
 [Stack Overflow][stackoverflow] is also worth considering for asking
 support questions.
 
@@ -28,7 +28,7 @@ Follow the [PEP8 style guide][pep8].
 You can check if your code follows the PEP8, either by running ``make lint``
 or by executing ``flake8`` directly.
 
-FlaskBB is depending on a few python packages for development. One of those is
+Ekaayam is depending on a few python packages for development. One of those is
 [py.test][pytest] which runs our testsuite. Just use the provided
 ``requirements-dev.txt`` file and you should be good to go.
 

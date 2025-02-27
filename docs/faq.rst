@@ -4,7 +4,7 @@
 FAQ - Frequently Asked Questions
 ================================
 
-Here we try to answer some common questions and pitfalls about FlaskBB.
+Here we try to answer some common questions and pitfalls about Ekaayam.
 
 * Why do I get a ``AttributeError: 'NullTranslations' object has no attribute 'add'`` exception?
 

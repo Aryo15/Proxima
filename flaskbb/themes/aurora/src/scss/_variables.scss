@@ -23,8 +23,8 @@ $black: #000;
 $white: #fff;
 
 
-// FlaskBB Variables
-$fbb-color: #212529; // bs5 gray-900
+// Ekaayam Variables
+$fbb-color: #FFFFFF; // bs5 gray-900
 $fbb-bg: #f6f9fc;
 $fbb-border-color: #cad7e1;
 $fbb-active-bg: #e7e7e7;
@@ -43,7 +43,7 @@ $fbb-header-bg-secondary: #285e8e;
 $fbb-footer-bg: #333333;
 
 $fbb-navigation-color: #555;
-$fbb-navigation-bg: #f8f8f8;
+$fbb-navigation-bg: transparent;
 $fbb-navigation-hover-color: #e7e7e7;
 
 
@@ -53,7 +53,7 @@ $page-head-bg: #f5f5f5;    // page head background
 $page-meta-bg: #eaf1f5;    // page meta background
 $page-meta-border: $fbb-border-color;   // page meta (bottom) border
 $page-border: $fbb-border-color;        // page border (all over)
-$page-hover: #f8f8f8;                // page-row hover
+$page-hover: transparent;                // page-row hover
 
 
 // post colors

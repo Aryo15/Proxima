@@ -5,9 +5,9 @@
 Core Exceptions
 ===============
 
-These are exceptions that aren't specific to any one part of FlaskBB
+These are exceptions that aren't specific to any one part of Ekaayam
 and are used ubiquitously.
 
-.. autoexception:: BaseFlaskBBError
+.. autoexception:: BaseEkaayamError
 .. autoexception:: ValidationError
 .. autoexception:: StopValidation

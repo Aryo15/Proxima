@@ -2,9 +2,9 @@
 flaskbb.utils.requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Authorization requirements for FlaskBB.
+Authorization requirements for Ekaayam.
 
-:copyright: (c) 2015 by the FlaskBB Team.
+:copyright: (c) 2015 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details
 """
 
@@ -12,7 +12,7 @@ import logging
 
 from flask_allows import And, Or, Permission, Requirement
 
-from flaskbb.exceptions import FlaskBBError
+from flaskbb.exceptions import EkaayamError
 from flaskbb.forum.locals import current_forum, current_post, current_topic
 from flaskbb.forum.models import Forum, Post, Topic
 
@@ -64,7 +64,7 @@ class IsModeratorInForum(IsAuthed):
 
     def _get_forum_from_request(self):
         if not current_forum:
-            raise FlaskBBError("Could not load forum data")
+            raise EkaayamError("Could not load forum data")
         return current_forum
 
 
@@ -88,7 +88,7 @@ class IsSameUser(IsAuthed):
         elif current_topic:
             return current_topic.user_id
         else:
-            raise FlaskBBError("Could not determine user")
+            raise EkaayamError("Could not determine user")
 
 
 class TopicNotLocked(Requirement):
@@ -128,7 +128,7 @@ class TopicNotLocked(Requirement):
         if current_topic:
             return current_topic.locked, current_forum.locked
         else:
-            raise FlaskBBError("How did you get this to happen?")
+            raise EkaayamError("How did you get this to happen?")
 
 
 class ForumNotLocked(Requirement):
@@ -154,13 +154,13 @@ class ForumNotLocked(Requirement):
     def _get_forum_from_request(self):
         if current_forum:
             return current_forum
-        raise FlaskBBError("Could not determine forum")
+        raise EkaayamError("Could not determine forum")
 
 
 class CanAccessForum(Requirement):
     def fulfill(self, user):
         if not current_forum:
-            raise FlaskBBError("Could not load forum data")
+            raise EkaayamError("Could not load forum data")
 
         forum_groups = {g.id for g in current_forum.groups}
         user_groups = {g.id for g in user.groups}

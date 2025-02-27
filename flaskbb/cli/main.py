@@ -5,7 +5,7 @@ flaskbb.cli.commands
 
 This module contains the main commands.
 
-:copyright: (c) 2016 by the FlaskBB Team.
+:copyright: (c) 2016 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -29,7 +29,7 @@ from werkzeug.utils import import_string
 from flaskbb import create_app
 from flaskbb.cli.utils import (
     EmailType,
-    FlaskBBCLIError,
+    EkaayamCLIError,
     get_version,
     prompt_config_path,
     prompt_save_user,
@@ -51,9 +51,9 @@ from flaskbb.utils.translations import compile_translations
 logger = logging.getLogger(__name__)
 
 
-class FlaskBBGroup(FlaskGroup):
+class EkaayamGroup(FlaskGroup):
     def __init__(self, *args, **kwargs):
-        super(FlaskBBGroup, self).__init__(*args, **kwargs)
+        super(EkaayamGroup, self).__init__(*args, **kwargs)
         self._loaded_flaskbb_plugins = False
 
     def _load_flaskbb_plugins(self, ctx):
@@ -75,11 +75,11 @@ class FlaskBBGroup(FlaskGroup):
 
     def get_command(self, ctx, name):
         self._load_flaskbb_plugins(ctx)
-        return super(FlaskBBGroup, self).get_command(ctx, name)
+        return super(EkaayamGroup, self).get_command(ctx, name)
 
     def list_commands(self, ctx):
         self._load_flaskbb_plugins(ctx)
-        return super(FlaskBBGroup, self).list_commands(ctx)
+        return super(EkaayamGroup, self).list_commands(ctx)
 
 
 def make_app():
@@ -105,7 +105,7 @@ def set_instance(ctx, param, value):
 
 
 @click.group(
-    cls=FlaskBBGroup,
+    cls=EkaayamGroup,
     create_app=make_app,
     add_version_option=False,
     invoke_without_command=True,
@@ -140,7 +140,7 @@ def set_instance(ctx, param, value):
     callback=get_version,
     is_flag=True,
     is_eager=True,
-    help="Show the FlaskBB version.",
+    help="Show the Ekaayam version.",
 )
 @click.pass_context
 def flaskbb(ctx):
@@ -184,7 +184,7 @@ def install(welcome, force, username, email, password, no_plugins):
         )
         sys.exit(1)
 
-    click.secho("[+] Installing FlaskBB...", fg="cyan")
+    click.secho("[+] Installing Ekaayam...", fg="cyan")
     if database_exists(db.engine.url):
         if force or click.confirm(
             click.style(
@@ -218,7 +218,7 @@ def install(welcome, force, username, email, password, no_plugins):
     click.secho("[+] Compiling translations...", fg="cyan")
     compile_translations()
 
-    click.secho("[+] FlaskBB has been successfully installed!", fg="green", bold=True)
+    click.secho("[+] Ekaayam has been successfully installed!", fg="green", bold=True)
 
 
 @flaskbb.command()
@@ -246,7 +246,7 @@ def install(welcome, force, username, email, password, no_plugins):
     help="Initializes the database before populating it.",
 )
 def populate(bulk_data, test_data, posts, topics, force, initdb):
-    """Creates the necessary tables and groups for FlaskBB."""
+    """Creates the necessary tables and groups for Ekaayam."""
     if force:
         click.secho("[+] Recreating database...", fg="cyan")
         db.drop_all()
@@ -323,7 +323,7 @@ def upgrade(all_latest, fixture, force):
             settings = import_string("flaskbb.fixtures.{}".format(fixture))
             settings = settings.fixture
         except ImportError:
-            raise FlaskBBCLIError(
+            raise EkaayamCLIError(
                 "{} fixture is not available".format(fixture), fg="red"
             )
 
@@ -463,7 +463,7 @@ def list_urls(order_by):
     help="Overwrite any existing config file if one exists.",
 )
 def generate_config(development, output, force):
-    """Generates a FlaskBB configuration file."""
+    """Generates a Ekaayam configuration file."""
     config_env = Environment(
         loader=FileSystemLoader(os.path.join(current_app.root_path, "configs"))
     )
@@ -497,7 +497,7 @@ def generate_config(development, output, force):
         "mail_use_ssl": False,
         "mail_username": "",
         "mail_password": "",
-        "mail_sender_name": "FlaskBB Mailer",
+        "mail_sender_name": "Ekaayam Mailer",
         "mail_sender_address": "noreply@yourdomain",
         "mail_admin_address": "admin@yourdomain",
         "secret_key": binascii.hexlify(os.urandom(24)).decode(),
@@ -525,8 +525,8 @@ def generate_config(development, output, force):
     # SERVER_NAME
     click.secho(
         "The name and port number of the exposed server.\n"
-        "If FlaskBB is accesible on port 80 you can just omit the "
-        "port.\n For example, if FlaskBB is accessible via "
+        "If Ekaayam is accesible on port 80 you can just omit the "
+        "port.\n For example, if Ekaayam is accessible via "
         "example.org:8080 than this is also what you would set here.",
         fg="cyan",
     )
@@ -537,7 +537,7 @@ def generate_config(development, output, force):
     )
 
     # HTTPS or HTTP
-    click.secho("Is HTTPS (recommended) or HTTP used for to serve FlaskBB?", fg="cyan")
+    click.secho("Is HTTPS (recommended) or HTTP used for to serve Ekaayam?", fg="cyan")
     default_conf["use_https"] = click.confirm(
         click.style("Use HTTPS?", fg="magenta"), default=default_conf.get("use_https")
     )

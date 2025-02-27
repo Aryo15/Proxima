@@ -5,7 +5,7 @@ flaskbb.forum.forms
 
 It provides the forms that are needed for the forum views.
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

@@ -2,9 +2,9 @@
 flaskbb.configs.testing
 ~~~~~~~~~~~~~~~~~~~~
 
-This is the FlaskBB's testing config.
+This is the Ekaayam's testing config.
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

@@ -6,7 +6,7 @@ flaskbb.user.views
 The user view handles the user profile
 and the user settings from a signed in user.
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

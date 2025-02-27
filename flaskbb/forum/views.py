@@ -6,7 +6,7 @@ flaskbb.forum.views
 This module handles the forum logic like creating and viewing
 topics and posts.
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

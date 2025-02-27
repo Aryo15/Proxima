@@ -7,7 +7,7 @@ Additional fields and widgets for wtforms.
 The reCAPTCHA Field was taken from Flask-WTF and modified
 to use our own settings system.
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

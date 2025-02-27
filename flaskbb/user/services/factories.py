@@ -2,11 +2,11 @@
 """
 flaskbb.user.services.factories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Factory functions for the various FlaskBB user services.
+Factory functions for the various Ekaayam user services.
 
 These factories are provisional and considered private APIs.
 
-:copyright: 2018, the FlaskBB Team.
+:copyright: 2018, the Ekaayam Team.
 :license: BSD, see LICENSE for more details
 """
 

@@ -57,7 +57,7 @@ jobs:
         pip install -r requirements-dev.txt
         pip install -e .
 
-    - name: Prepare FlaskBB
+    - name: Prepare Ekaayam
       run: |
         flaskbb translations compile
 

@@ -3,9 +3,9 @@
 flaskbb.utils.translations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This module contains the translation Domain used by FlaskBB.
+This module contains the translation Domain used by Ekaayam.
 
-:copyright: (c) 2016 by the FlaskBB Team.
+:copyright: (c) 2016 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -21,10 +21,10 @@ from flask_babelplus.utils import get_state
 logger = logging.getLogger(__name__)
 
 
-class FlaskBBDomain(Domain):
+class EkaayamDomain(Domain):
     def __init__(self, app):
         self.app = app
-        super(FlaskBBDomain, self).__init__()
+        super(EkaayamDomain, self).__init__()
 
         # Plugin translations
         with self.app.app_context():

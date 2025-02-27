@@ -2,9 +2,9 @@
 """
 flaskbb.auth.services.activation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Handlers for activating accounts in FlaskBB
+Handlers for activating accounts in Ekaayam
 
-:copyright: (c) 2014-2018 the FlaskBB Team
+:copyright: (c) 2014-2018 the Ekaayam Team
 :license: BSD, see LICENSE for more details
 """
 
@@ -18,7 +18,7 @@ from ...email import send_activation_token
 
 class AccountActivator(_AccountActivator):
     """
-    Default account activator for FlaskBB, handles the activation
+    Default account activator for Ekaayam, handles the activation
     process through email.
     """
 

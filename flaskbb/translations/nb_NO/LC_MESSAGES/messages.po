@@ -1143,8 +1143,8 @@ msgstr "Programtillegget %(plugin)s er allerede påslått."
 
 #: flaskbb/management/views.py:1210
 #, python-format
-msgid "Plugin %(plugin)s enabled. Please restart FlaskBB now."
-msgstr "Programtillegget %(plugin)s ble slått på. Utfør omstart av FlaskBB nå."
+msgid "Plugin %(plugin)s enabled. Please restart Ekaayam now."
+msgstr "Programtillegget %(plugin)s ble slått på. Utfør omstart av Ekaayam nå."
 
 #: flaskbb/management/views.py:1236
 #, python-format
@@ -1153,8 +1153,8 @@ msgstr "Programtillegget %(plugin)s er allerede avskrudd."
 
 #: flaskbb/management/views.py:1244
 #, python-format
-msgid "Plugin %(plugin)s disabled. Please restart FlaskBB now."
-msgstr "Programtillegget %(plugin)s er avskrudd. Utfør omstart av FlaskBB nå."
+msgid "Plugin %(plugin)s disabled. Please restart Ekaayam now."
+msgstr "Programtillegget %(plugin)s er avskrudd. Utfør omstart av Ekaayam nå."
 
 #: flaskbb/management/views.py:1269
 #, fuzzy

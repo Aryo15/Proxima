@@ -17,7 +17,7 @@ def updated_fixture():
                     (
                         "project_title",
                         {
-                            "value": "FlaskBB is cool!",
+                            "value": "Ekaayam is cool!",
                             "value_type": SettingValueType.string,
                             "name": "Project title",
                             "description": "The title of the project.",
@@ -29,7 +29,7 @@ def updated_fixture():
                         {
                             "description": "This is a test fixture",
                             "name": "Test Fixture",
-                            "value": "FlaskBBTest",
+                            "value": "EkaayamTest",
                             "value_type": SettingValueType.string,
                         },
                     ),

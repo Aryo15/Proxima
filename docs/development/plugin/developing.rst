@@ -30,7 +30,7 @@ For example, the structure of a plugin could look like this:
 Metadata
 --------
 
-FlaskBB Plugins are usually following the naming scheme of
+Ekaayam Plugins are usually following the naming scheme of
 ``flaskbb-plugin-YOUR_PLUGIN_NAME`` which should make them better
 distinguishable from other PyPI distributions.
 
@@ -60,10 +60,10 @@ the ``setup.py`` file.
         }
     )
 
-The most important part here is the ``entry_point``. Here you tell FlaskBB the
+The most important part here is the ``entry_point``. Here you tell Ekaayam the
 unique name of your plugin and where your plugin module is located inside
 your project. Entry points are a feature that is provided by setuptools.
-FlaskBB looks up the ``flaskbb_plugin`` entrypoint to discover its plugins.
+Ekaayam looks up the ``flaskbb_plugin`` entrypoint to discover its plugins.
 Have a look at the `setup script`_ documentation and the `sample setup.py`_
 file to get a better idea what the ``setup.py`` file is all about it.
 
@@ -86,7 +86,7 @@ The structure of the ``SETTINGS`` dictionary is best explained via an
 example::
 
     SETTINGS = {
-        # This key has to be unique across FlaskBB.
+        # This key has to be unique across Ekaayam.
         # Using a prefix is recommended.
         'forum_ids': {
 

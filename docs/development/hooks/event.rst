@@ -2,7 +2,7 @@
 
 .. currentmodule:: flaskbb.plugins.spec
 
-FlaskBB Event Hooks
+Ekaayam Event Hooks
 ===================
 
 Post and Topic Events

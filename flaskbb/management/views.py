@@ -5,7 +5,7 @@ flaskbb.management.views
 
 This module handles the management views.
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -1216,7 +1216,7 @@ class EnablePlugin(MethodView):
 
         flash(
             _(
-                "Plugin %(plugin)s enabled. Please restart FlaskBB now.",
+                "Plugin %(plugin)s enabled. Please restart Ekaayam now.",
                 plugin=plugin.name,
             ),
             "success",
@@ -1250,7 +1250,7 @@ class DisablePlugin(MethodView):
         plugin.save()
         flash(
             _(
-                "Plugin %(plugin)s disabled. Please restart FlaskBB now.",
+                "Plugin %(plugin)s disabled. Please restart Ekaayam now.",
                 plugin=plugin.name,
             ),
             "success",

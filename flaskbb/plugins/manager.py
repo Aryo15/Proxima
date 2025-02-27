@@ -3,9 +3,9 @@
 flaskbb.plugins.manager
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Plugin Manager for FlaskBB
+Plugin Manager for Ekaayam
 
-:copyright: 2017, the FlaskBB Team
+:copyright: 2017, the Ekaayam Team
 :license: BSD, see LICENSE for more details
 """
 
@@ -19,13 +19,13 @@ from flaskbb.utils.helpers import parse_pkg_metadata
 logger = logging.getLogger(__name__)
 
 
-class FlaskBBPluginManager(pluggy.PluginManager):
-    """Overwrites :class:`pluggy.PluginManager` to add FlaskBB
+class EkaayamPluginManager(pluggy.PluginManager):
+    """Overwrites :class:`pluggy.PluginManager` to add Ekaayam
     specific stuff.
     """
 
     def __init__(self, project_name):
-        super(FlaskBBPluginManager, self).__init__(project_name=project_name)
+        super(EkaayamPluginManager, self).__init__(project_name=project_name)
         self._plugin_metadata = {}
         self._disabled_plugins = {}
 
@@ -38,7 +38,7 @@ class FlaskBBPluginManager(pluggy.PluginManager):
         Raise a ValueError if the plugin is already registered.
         """
         # internal plugins are stored in self._plugin2hookcallers
-        name = super(FlaskBBPluginManager, self).register(plugin, name)
+        name = super(EkaayamPluginManager, self).register(plugin, name)
         if not internal:
             return name
 
@@ -49,7 +49,7 @@ class FlaskBBPluginManager(pluggy.PluginManager):
         """Unregister a plugin object and all its contained hook implementations
         from internal data structures.
         """
-        plugin = super(FlaskBBPluginManager, self).unregister(plugin=plugin, name=name)
+        plugin = super(EkaayamPluginManager, self).unregister(plugin=plugin, name=name)
 
         name = self.get_name(plugin)
         if self._internal_name2plugin.get(name):
@@ -61,12 +61,12 @@ class FlaskBBPluginManager(pluggy.PluginManager):
         """Block registrations of the given name, unregister if already
         registered.
         """
-        super(FlaskBBPluginManager, self).set_blocked(name)
+        super(EkaayamPluginManager, self).set_blocked(name)
         self._internal_name2plugin[name] = None
 
     def is_blocked(self, name):
         """Return True if the name blockss registering plugins of that name."""
-        blocked = super(FlaskBBPluginManager, self).is_blocked(name)
+        blocked = super(EkaayamPluginManager, self).is_blocked(name)
 
         return (
             blocked
@@ -76,12 +76,12 @@ class FlaskBBPluginManager(pluggy.PluginManager):
 
     def get_plugin(self, name):
         """Return a plugin or None for the given name."""
-        plugin = super(FlaskBBPluginManager, self).get_plugin(name)
+        plugin = super(EkaayamPluginManager, self).get_plugin(name)
         return self._internal_name2plugin.get(name, plugin)
 
     def get_name(self, plugin):
         """Return name for registered plugin or None if not registered."""
-        name = super(FlaskBBPluginManager, self).get_name(plugin)
+        name = super(EkaayamPluginManager, self).get_name(plugin)
         if name:
             return name
 

@@ -3,10 +3,10 @@
 flaskbb.utils.settings
 ~~~~~~~~~~~~~~~~~~~~~~
 
-This module contains the interface for interacting with FlaskBB's
+This module contains the interface for interacting with Ekaayam's
 configuration.
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -18,8 +18,8 @@ from flaskbb.management.models import Setting
 logger = logging.getLogger(__name__)
 
 
-class FlaskBBConfig(MutableMapping):
-    """Provides a dictionary like interface for interacting with FlaskBB's
+class EkaayamConfig(MutableMapping):
+    """Provides a dictionary like interface for interacting with Ekaayam's
     Settings cache.
     """
 
@@ -46,4 +46,4 @@ class FlaskBBConfig(MutableMapping):
         return len(Setting.as_dict())
 
 
-flaskbb_config = FlaskBBConfig()
+flaskbb_config = EkaayamConfig()

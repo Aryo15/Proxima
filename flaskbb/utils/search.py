@@ -3,10 +3,10 @@
 flaskbb.utils.search
 ~~~~~~~~~~~~~~~~~~~~
 
-This module contains all the whoosheers for FlaskBB's
+This module contains all the whoosheers for Ekaayam's
 full text search.
 
-:copyright: (c) 2016 by the FlaskBB Team.
+:copyright: (c) 2016 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

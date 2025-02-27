@@ -3,7 +3,7 @@
 Hooks
 =====
 
-In FlaskBB we distinguish from `Python Hooks <#python-hooks>`_ and
+In Ekaayam we distinguish from `Python Hooks <#python-hooks>`_ and
 `Template Hooks <#template-hooks>`_.
 Python Hooks are prefixed with ``flaskbb_`` and called are called in Python
 files whereas Template Hooks have to be prefixed with ``flaskbb_tpl_`` and are

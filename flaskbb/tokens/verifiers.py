@@ -4,7 +4,7 @@ flaskbb.tokens.verifiers
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Token verifier implementations
 
-:copyright: (c) 2014-2018 the FlaskBB Team
+:copyright: (c) 2014-2018 the Ekaayam Team
 :license: BSD, see LICENSE for more details
 """
 

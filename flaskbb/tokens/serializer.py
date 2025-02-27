@@ -3,7 +3,7 @@
 flaskbb.tokens.serializer
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:copyright: (c) 2018 the FlaskBB Team.
+:copyright: (c) 2018 the Ekaayam Team.
 :license: BSD, see LICENSE for more details
 """
 
@@ -16,9 +16,9 @@ from ..core import tokens
 _DEFAULT_EXPIRY = datetime.timedelta(hours=1)
 
 
-class FlaskBBTokenSerializer(tokens.TokenSerializer):
+class EkaayamTokenSerializer(tokens.TokenSerializer):
     """
-    Default token serializer for FlaskBB. Generates JWTs
+    Default token serializer for Ekaayam. Generates JWTs
     that are time sensitive. By default they will expire after
     1 hour.
 

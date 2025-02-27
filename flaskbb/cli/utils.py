@@ -6,7 +6,7 @@ flaskbb.cli.utils
 This module contains some utility helpers that are used across
 commands.
 
-:copyright: (c) 2016 by the FlaskBB Team.
+:copyright: (c) 2016 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -25,7 +25,7 @@ from flaskbb.utils.populate import create_user, update_user
 _email_regex = r"[^@]+@[^@]+\.[^@]+"
 
 
-class FlaskBBCLIError(click.ClickException):
+class EkaayamCLIError(click.ClickException):
     """An exception that signals a usage error including color support.
     This aborts any further handling.
 
@@ -70,7 +70,7 @@ def validate_plugin(plugin):
     # list_name holds all plugin names, also the disabled ones (they won't do
     # anything as they are set as 'blocked' on pluggy)
     if plugin not in current_app.pluggy.list_name():
-        raise FlaskBBCLIError("Plugin {} not found.".format(plugin), fg="red")
+        raise EkaayamCLIError("Plugin {} not found.".format(plugin), fg="red")
     return True
 
 
@@ -79,7 +79,7 @@ def validate_theme(theme):
     try:
         get_theme(theme)
     except KeyError:
-        raise FlaskBBCLIError("Theme {} not found.".format(theme), fg="red")
+        raise EkaayamCLIError("Theme {} not found.".format(theme), fg="red")
 
 
 def get_cookiecutter():
@@ -92,7 +92,7 @@ def get_cookiecutter():
         pass
 
     if not cookiecutter_available:
-        raise FlaskBBCLIError(
+        raise EkaayamCLIError(
             "Can't continue because cookiecutter is not installed. "
             "You can install it with 'pip install cookiecutter'.",
             fg="red",
@@ -104,7 +104,7 @@ def get_version(ctx, param, value):
     if not value or ctx.resilient_parsing:
         return
     message = (
-        "FlaskBB %(version)s using Flask %(flask_version)s on "
+        "Ekaayam %(version)s using Flask %(flask_version)s on "
         "Python %(python_version)s"
     )
     click.echo(

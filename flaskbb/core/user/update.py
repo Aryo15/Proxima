@@ -4,9 +4,9 @@ flaskbb.core.user.update
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 This modules provides services used in updating user details
-across FlaskBB.
+across Ekaayam.
 
-:copyright: (c) 2014-2018 by the FlaskBB Team.
+:copyright: (c) 2014-2018 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

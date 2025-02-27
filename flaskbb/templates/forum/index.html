@@ -1,7 +1,7 @@
 {% extends theme("layout.html") %}
 {% block content %}
 
-<div class="index-view">
+<div class="index-view" style="background-color: transparent;>
     {% for category, forums in categories %}
         {% include theme("forum/category_layout.html") %}
     {% endfor %}

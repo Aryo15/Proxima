@@ -3,7 +3,7 @@
 Authentication
 ==============
 
-FlaskBB exposes several interfaces and hooks to customize authentication and
+Ekaayam exposes several interfaces and hooks to customize authentication and
 implementations of these. For details on the hooks see :ref:`hooks`
 
 Authentication Interfaces
@@ -32,7 +32,7 @@ Authentication Provided Implementations
 ---------------------------------------
 
 .. module:: flaskbb.auth.services.authentication
-.. autoclass:: DefaultFlaskBBAuthProvider
+.. autoclass:: DefaultEkaayamAuthProvider
 .. autoclass:: MarkFailedLogin
 .. autoclass:: BlockUnactivatedUser
 .. autoclass:: ClearFailedLogins
@@ -66,7 +66,7 @@ Reauthentication Provided Implementations
 -----------------------------------------
 
 .. module:: flaskbb.auth.services.reauthentication
-.. autoclass:: DefaultFlaskBBReauthProvider
+.. autoclass:: DefaultEkaayamReauthProvider
 .. autoclass:: ClearFailedLoginsOnReauth
 .. autoclass:: MarkFailedReauth
 .. autoclass:: PluginReauthenticationManager

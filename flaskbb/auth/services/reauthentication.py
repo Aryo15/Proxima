@@ -2,9 +2,9 @@
 """
 flaskbb.auth.services.reauthentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Tools for handling reauthentication needs inside FlaskBB.
+Tools for handling reauthentication needs inside Ekaayam.
 
-:copyright: (c) 2014-2018 the FlaskBB Team
+:copyright: (c) 2014-2018 the Ekaayam Team
 :license: BSD, see LICENSE for more details
 """
 
@@ -25,9 +25,9 @@ from ...utils.helpers import time_utcnow
 logger = logging.getLogger(__name__)
 
 
-class DefaultFlaskBBReauthProvider(ReauthenticateProvider):
+class DefaultEkaayamReauthProvider(ReauthenticateProvider):
     """
-    This is the default reauth provider in FlaskBB, it compares the provided
+    This is the default reauth provider in Ekaayam, it compares the provided
     password against the current user's hashed password.
     """
 
@@ -59,7 +59,7 @@ class MarkFailedReauth(ReauthenticateFailureHandler):
 
 class PluginReauthenticationManager(ReauthenticateManager):
     """
-    Default reauthentication manager for FlaskBB, it relies on plugin hooks
+    Default reauthentication manager for Ekaayam, it relies on plugin hooks
     to manage the reauthentication flow.
     """
 

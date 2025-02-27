@@ -17,7 +17,7 @@ pytestmark = pytest.mark.usefixtures("default_settings")
 
 
 def test_default_reauth_returns_true_if_secret_matches_user(Fred):
-    service = reauth.DefaultFlaskBBReauthProvider()
+    service = reauth.DefaultEkaayamReauthProvider()
 
     assert service.reauthenticate(Fred, "fred")
 

@@ -3,10 +3,10 @@
 flaskbb
 ~~~~~~~
 
-FlaskBB is a forum software written in python using the
+Ekaayam is a forum software written in python using the
 microframework Flask.
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

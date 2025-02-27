@@ -5,7 +5,7 @@ flaskbb.utils.populate
 
 A module that makes creating data more easily
 
-:copyright: (c) 2014 by the FlaskBB Team.
+:copyright: (c) 2014 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -245,7 +245,7 @@ def create_welcome_forum():
     forum.save()
 
     topic = Topic(title="Welcome!")
-    post = Post(content="Have fun with your new FlaskBB Forum!")
+    post = Post(content="Have fun with your new Ekaayam Forum!")
 
     topic.save(user=user, forum=forum, post=post)
     return True

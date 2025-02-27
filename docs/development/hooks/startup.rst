@@ -9,9 +9,9 @@ Application startup hooks are called when the application is created,
 either through a WSGI server (uWSGI or gunicorn for example) or by
 the ``flaskbb`` command.
 
-Unless noted, all FlaskBB hooks are called after the relevant builtin
-FlaskBB setup has run (e.g. ``flaskbb_load_blueprints`` is called after
-all standard FlaskBB blueprints have been loaded).
+Unless noted, all Ekaayam hooks are called after the relevant builtin
+Ekaayam setup has run (e.g. ``flaskbb_load_blueprints`` is called after
+all standard Ekaayam blueprints have been loaded).
 
 The hooks below are listed in the order they are called.
 

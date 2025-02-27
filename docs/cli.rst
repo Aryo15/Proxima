@@ -3,7 +3,7 @@
 Command Line Interface
 ======================
 
-Here you can find the documentation about FlaskBB's Command Line Interface.
+Here you can find the documentation about Ekaayam's Command Line Interface.
 
 To get help for a commands, just type ``flaskbb COMMAND --help``.
 If no command options or arguments are used it will display all available
@@ -18,7 +18,7 @@ commands.
     Options:
       --config CONFIG  Specify the config to use in dotted module notation e.g.
                        flaskbb.configs.default.DefaultConfig
-      --version        Show the FlaskBB version.
+      --version        Show the Ekaayam version.
       --help           Show this message and exit.
 
     Commands:
@@ -26,9 +26,9 @@ commands.
       db               Perform database migrations.
       download-emojis  Downloads emojis from emoji-cheat-sheet.com.
       install          Installs flaskbb.
-      makeconfig       Generates a FlaskBB configuration file.
+      makeconfig       Generates a Ekaayam configuration file.
       plugins          Plugins command sub group.
-      populate         Creates the necessary tables and groups for FlaskBB.
+      populate         Creates the necessary tables and groups for Ekaayam.
       reindex          Reindexes the search index.
       run              Runs a development server.
       shell            Runs a shell in the app context.
@@ -98,7 +98,7 @@ of their options and arguments.
 
 .. describe:: flaskbb populate
 
-    Creates the necessary tables and groups for FlaskBB.
+    Creates the necessary tables and groups for Ekaayam.
 
     .. describe:: --test-data, -t
 
@@ -132,7 +132,7 @@ of their options and arguments.
 .. describe:: flaskbb start
 
     Starts a production ready wsgi server.
-    Other versions of starting FlaskBB are still supported!
+    Other versions of starting Ekaayam are still supported!
 
     .. describe:: --server SERVER, -s SERVER
 
@@ -142,11 +142,11 @@ of their options and arguments.
 
     .. describe:: --host HOST, -h HOST
 
-        The interface to bind FlaskBB to. Defaults to ``127.0.0.1``.
+        The interface to bind Ekaayam to. Defaults to ``127.0.0.1``.
 
     .. describe:: --port PORT, -p PORT
 
-        The port to bind FlaskBB to. Defaults to ``8000``.
+        The port to bind Ekaayam to. Defaults to ``8000``.
 
     .. describe:: --workers WORKERS, -w WORKERS
 
@@ -159,7 +159,7 @@ of their options and arguments.
 
     .. describe:: --config, -c
 
-        The configuration file to use for the FlaskBB WSGI Application.
+        The configuration file to use for the Ekaayam WSGI Application.
 
 .. describe:: flaskbb celery CELERY_ARGS
 
@@ -192,7 +192,7 @@ of their options and arguments.
 
 .. describe:: flaskbb makeconfig
 
-    Generates a FlaskBB configuration file.
+    Generates a Ekaayam configuration file.
 
     .. describe:: --development, -d
 
@@ -217,7 +217,7 @@ of their options and arguments.
 
     .. describe:: new LANGUAGE_CODE
 
-        Adds a new language to FlaskBB's translations.
+        Adds a new language to Ekaayam's translations.
         The ``LANGUAGE_CODE`` is the short identifier for the language i.e.
         '``en``', '``de``', '``de_AT``', etc.
 

@@ -4,9 +4,9 @@ flaskbb.core.auth.services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This modules provides services used in authentication and authorization
-across FlaskBB.
+across Ekaayam.
 
-:copyright: (c) 2014-2018 by the FlaskBB Team.
+:copyright: (c) 2014-2018 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

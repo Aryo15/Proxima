@@ -2,9 +2,9 @@ import warnings
 
 import pytest
 
-from flaskbb.deprecation import RemovedInFlaskBB3, deprecated
+from flaskbb.deprecation import RemovedInEkaayam3, deprecated
 
-NEXT_VERSION_STRING = ".".join([str(x) for x in RemovedInFlaskBB3.version])
+NEXT_VERSION_STRING = ".".join([str(x) for x in RemovedInEkaayam3.version])
 
 
 @deprecated("This is only a drill")
@@ -23,12 +23,12 @@ def default_deprecation():
 
 class TestDeprecation(object):
     def test_emits_default_deprecation_warning(self, recwarn):
-        warnings.simplefilter("default", RemovedInFlaskBB3)
+        warnings.simplefilter("default", RemovedInEkaayam3)
         default_deprecation()
 
         assert len(recwarn) == 1
         assert "default_deprecation is deprecated" in str(recwarn[0].message)
-        assert recwarn[0].category == RemovedInFlaskBB3
+        assert recwarn[0].category == RemovedInEkaayam3
         assert recwarn[0].filename == __file__
         # assert on the next line is conditional on the position of the call
         # to default_deprecation please don't jiggle it around too much
@@ -36,7 +36,7 @@ class TestDeprecation(object):
         assert "only_a_drill is deprecated" in only_a_drill.__doc__
 
     def tests_emits_specialized_message(self, recwarn):
-        warnings.simplefilter("default", RemovedInFlaskBB3)
+        warnings.simplefilter("default", RemovedInEkaayam3)
         only_a_drill()
 
         expected = "only_a_drill is deprecated and will be removed in version {}. This is only a drill".format(  # noqa
@@ -45,17 +45,17 @@ class TestDeprecation(object):
         assert len(recwarn) == 1
         assert expected in str(recwarn[0].message)
 
-    def tests_only_accepts_FlaskBBDeprecationWarnings(self):
+    def tests_only_accepts_EkaayamDeprecationWarnings(self):
         with pytest.raises(ValueError) as excinfo:
             # DeprecationWarning is ignored by default
             @deprecated("This is also a drill", category=UserWarning)
             def also_a_drill():
                 pass
 
-        assert "Expected subclass of FlaskBBDeprecation" in str(excinfo.value)
+        assert "Expected subclass of EkaayamDeprecation" in str(excinfo.value)
 
     def tests_deprecated_decorator_work_with_method(self, recwarn):
-        warnings.simplefilter("default", RemovedInFlaskBB3)
+        warnings.simplefilter("default", RemovedInEkaayam3)
         self.deprecated_instance_method()
 
         assert len(recwarn) == 1

@@ -1,4 +1,4 @@
-# FlaskBB
+# Ekaayam
 
 [![Build Status](https://github.com/flaskbb/flaskbb/actions/workflows/tests.yml/badge.svg)](https://github.com/flaskbb/flaskbb/actions/workflows/tests.yml)
 [![codecov](https://codecov.io/gh/flaskbb/flaskbb/branch/master/graph/badge.svg)](https://codecov.io/gh/flaskbb/flaskbb)
@@ -7,7 +7,7 @@
 [![#flaskbb:matrix.org](https://img.shields.io/badge/[matrix]-%23flaskbb%3Amatrix.org-blue)](https://matrix.to/#/#flaskbb:matrix.org)
 [![#flaskbb@libera.chat](https://img.shields.io/badge/irc.libera.chat-%23flaskbb-blue.svg)](https://web.libera.chat/?channel=#flaskbb)
 
-*FlaskBB is a Forum Software written in Python using the micro framework Flask.*
+*Ekaayam is a Forum Software written in Python using the micro framework Flask.*
 
 Currently, following features are implemented:
 
@@ -23,7 +23,7 @@ Currently, following features are implemented:
 * Command Line Interface
 
 
-The official forums which are powered by FlaskBB can be reached via
+The official forums which are powered by Ekaayam can be reached via
 [forums.flaskbb.org](https://forums.flaskbb.org).
 
 
@@ -32,12 +32,12 @@ The official forums which are powered by FlaskBB can be reached via
 For a complete installation guide please visit the installation documentation
 [here](https://flaskbb.readthedocs.org/en/latest/installation.html).
 
-This is how you set up an development instance of FlaskBB:
+This is how you set up an development instance of Ekaayam:
 
 * Create a virtualenv
 * Configuration
     * `make devconfig`
-* Install dependencies and FlaskBB
+* Install dependencies and Ekaayam
     * `make install`
 * Run the development server
     * `make run`
@@ -46,7 +46,7 @@ This is how you set up an development instance of FlaskBB:
 
 ## License
 
-FlaskBB is licensed under the [BSD License](https://github.com/flaskbb/flaskbb/blob/master/LICENSE).
+Ekaayam is licensed under the [BSD License](https://github.com/flaskbb/flaskbb/blob/master/LICENSE).
 
 
 # Links

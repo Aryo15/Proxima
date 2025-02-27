@@ -2,9 +2,9 @@
 """
 flaskbb.auth.plugins
 ~~~~~~~~~~~~~~~~~~~~
-Plugin implementations for FlaskBB auth hooks
+Plugin implementations for Ekaayam auth hooks
 
-:copyright: (c) 2014-2018 the FlaskBB Team.
+:copyright: (c) 2014-2018 the Ekaayam Team.
 :license: BSD, see LICENSE for more details
 """
 
@@ -19,13 +19,13 @@ from . import impl
 from .services.authentication import (
     BlockUnactivatedUser,
     ClearFailedLogins,
-    DefaultFlaskBBAuthProvider,
+    DefaultEkaayamAuthProvider,
     MarkFailedLogin,
 )
 from .services.factories import account_activator_factory
 from .services.reauthentication import (
     ClearFailedLoginsOnReauth,
-    DefaultFlaskBBReauthProvider,
+    DefaultEkaayamReauthProvider,
     MarkFailedReauth,
 )
 from .services.registration import (
@@ -41,7 +41,7 @@ from .services.registration import (
 
 @impl(trylast=True)
 def flaskbb_authenticate(identifier, secret):
-    return DefaultFlaskBBAuthProvider().authenticate(identifier, secret)
+    return DefaultEkaayamAuthProvider().authenticate(identifier, secret)
 
 
 @impl(tryfirst=True)
@@ -62,7 +62,7 @@ def flaskbb_authentication_failed(identifier):
 
 @impl(trylast=True)
 def flaskbb_reauth_attempt(user, secret):
-    return DefaultFlaskBBReauthProvider().reauthenticate(user, secret)
+    return DefaultEkaayamReauthProvider().reauthenticate(user, secret)
 
 
 @impl

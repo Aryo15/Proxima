@@ -3,7 +3,7 @@
 Display
 =======
 
-FlaskBB exposes a handful of helpers for building dynamic content to be rendered
+Ekaayam exposes a handful of helpers for building dynamic content to be rendered
 into templates.
 
 Navigation

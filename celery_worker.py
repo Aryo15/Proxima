@@ -8,7 +8,7 @@ To start celery, enter this in the console::
 
     celery -A celery_worker.celery --loglevel=info worker
 
-:copyright: (c) 2016 by the FlaskBB Team.
+:copyright: (c) 2016 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

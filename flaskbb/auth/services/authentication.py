@@ -4,9 +4,9 @@ flaskbb.auth.services.authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Authentication providers, handlers and post-processors
-in FlaskBB
+in Ekaayam
 
-:copyright: (c) 2014-2018 the FlaskBB Team.
+:copyright: (c) 2014-2018 the Ekaayam Team.
 :license: BSD, see LICENSE for more details
 """
 
@@ -75,7 +75,7 @@ class BlockTooManyFailedLogins(AuthenticationProvider):
                 )
 
 
-class DefaultFlaskBBAuthProvider(AuthenticationProvider):
+class DefaultEkaayamAuthProvider(AuthenticationProvider):
     """
     This is the default username/email and password authentication checker,
     locates the user based on the identifer passed -- either username or email
@@ -146,7 +146,7 @@ class ClearFailedLogins(PostAuthenticationHandler):
 class PluginAuthenticationManager(AuthenticationManager):
     """
     Authentication manager relying on plugin hooks to manage the authentication
-    process. This is the default authentication manager for FlaskBB.
+    process. This is the default authentication manager for Ekaayam.
     """
 
     def __init__(self, plugin_manager, session):

@@ -2,9 +2,9 @@
 """
 flaskbb.forum.locals
 ~~~~~~~~~~~~~~~~~~~~
-Thread local helpers for FlaskBB
+Thread local helpers for Ekaayam
 
-:copyright: 2017, the FlaskBB Team
+:copyright: 2017, the Ekaayam Team
 :license: BSD, see license for more details
 """
 

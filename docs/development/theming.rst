@@ -3,7 +3,7 @@
 Theming
 =======
 
-FlaskBB uses the `Flask-Themes2`_ extension for theming.
+Ekaayam uses the `Flask-Themes2`_ extension for theming.
 
 
 Quickstart
@@ -14,7 +14,7 @@ Quickstart
 2. Copy the content of the ``aurora/`` folder into your folder theme's folder.
 3. Create **2** new folders called ``static/`` and ``templates/`` in your
    themes folder.
-4. Copy ``layout.html`` from FlaskBB's ``templates/`` into your themes
+4. Copy ``layout.html`` from Ekaayam's ``templates/`` into your themes
    ``templates/`` folder and modified to your liking. Feel free to copy
    other templates over into your themes. Just make sure that they have the
    same name and directory structure to overwrite them.
@@ -81,7 +81,7 @@ aurora theme looks like this:
         "author": "Peter Justin",
         "license": "BSD 3-Clause",
         "website": "https://flaskbb.org",
-        "description": "The default theme for FlaskBB.",
+        "description": "The default theme for Ekaayam.",
         "preview": "preview.png",
         "version": "1.0.0"
     }
@@ -127,14 +127,14 @@ Field Explanation
 Templates
 ~~~~~~~~~
 
-`Flask`_ and therefore also FlaskBB uses the `Jinja2`_ templating engine,
+`Flask`_ and therefore also Ekaayam uses the `Jinja2`_ templating engine,
 so you should read `its documentation <http://jinja.pocoo.org/docs/templates>`_
 to learn about the actual syntax of the templates.
 
-All templates are by default loaded from FlaskBB's ``templates/`` folder. In
+All templates are by default loaded from Ekaayam's ``templates/`` folder. In
 order to create your own theme, you have to create a ``templates/`` folder in
 your themes directory and optionally also copy the ``layout.html`` file from
-FlaskBB's template folder over to yours. This ``layout.html`` file is your
+Ekaayam's template folder over to yours. This ``layout.html`` file is your
 starting point. Every template will extend it. If you want to overwrite other
 templates, just copy them over from the templates folder and modify them
 to your liking.
@@ -158,10 +158,10 @@ If you pass `false` as the second parameter, it will only return the theme's tem
 
 .. sourcecode:: html+jinja
 
-    {# This template, for example, does not exist in FlaskBB #}
+    {# This template, for example, does not exist in Ekaayam #}
     {% include theme('header.html', false) %}
 
-You can also explicitly import/include templates from FlaskBB. Just use the
+You can also explicitly import/include templates from Ekaayam. Just use the
 tag without calling `theme`.
 
 .. sourcecode:: html+jinja
@@ -175,7 +175,7 @@ function:
 
     <link rel=stylesheet href="{{ theme_static('style.css') }}">
 
-To include the static files that FlaskBB ships with, you just proceed as
+To include the static files that Ekaayam ships with, you just proceed as
 normal:
 
 .. sourcecode:: html+jinja
@@ -197,13 +197,13 @@ Advanced Example
 
 A more advanced example of a theme, is our own default theme called
 **Aurora**. We do not have a ``layout.html`` file because we want to avoid code
-duplication and are just falling back to the one that FlaskBB ships with in
+duplication and are just falling back to the one that Ekaayam ships with in
 its ``templates/`` folder. In order to use your own stylesheets you have to
 create a ``layout.html`` file. It's probably the easiest to just copy the
-``layout.html`` from FlaskBB's ``templates/`` folder into your themes
+``layout.html`` from Ekaayam's ``templates/`` folder into your themes
 ``templates/`` folder.
 
-For example, the `forums <https://forums.flaskbb.org>`_ on FlaskBB are using
+For example, the `forums <https://forums.flaskbb.org>`_ on Ekaayam are using
 a slightly modified version of the Aurora theme. It is available on GitHub
 here: `Aurora Mod <https://github.com/sh4nks/flaskbb-theme-aurora-mod>`_.
 The modified version just adds a top navigation and uses a different footer.

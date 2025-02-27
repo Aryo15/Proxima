@@ -5,11 +5,11 @@ Plugins
 
 .. module:: flaskbb.plugins
 
-FlaskBB provides a full featured plugin system. This system allows you to
-easily extend or modify FlaskBB without touching any FlaskBB code. Under the
+Ekaayam provides a full featured plugin system. This system allows you to
+easily extend or modify Ekaayam without touching any Ekaayam code. Under the
 hood it uses the `pluggy plugin system`_ which does most of the heavy lifting
 for us. A list of available plugins can be found at the `GitHub Wiki`_. A
-proper index for FlaskBB Plugins and Themes still have to be built.
+proper index for Ekaayam Plugins and Themes still have to be built.
 
 If you are interested in creating new plugins, checkout out the
 :ref:`Developing new Plugins <plugin_development>` page.
@@ -21,7 +21,7 @@ If you are interested in creating new plugins, checkout out the
 Management
 ----------
 
-Before plugins can be used in FlaskBB, they have to be downloaded, installed
+Before plugins can be used in Ekaayam, they have to be downloaded, installed
 and activated.
 Plugins can be very minimalistic with nothing to install at all (just enabling
 and disabling) to be very complex where you have to `run migrations <./plugins.html#database>`_ and add
@@ -44,7 +44,7 @@ in your plugin's package directory to install it.
 Remove
 ~~~~~~
 
-Removing a plugin is a little bit more tricky. By default, FlaskBB does not
+Removing a plugin is a little bit more tricky. By default, Ekaayam does not
 remove the settings of a plugin by itself because this could lead to some
 unwanted dataloss.
 
@@ -55,7 +55,7 @@ plugin anymore you can finally remove it::
 
     $ pip uninstall flaskbb-plugin-MYPLUGIN
 
-There is a setting in FlaskBB which lets you control the deletion of settings
+There is a setting in Ekaayam which lets you control the deletion of settings
 of a plugin. If ``REMOVE_DEAD_PLUGINS`` is set to ``True``, all not available
 plugins (not available on the filesystem) are constantly removed. Only change
 this if you know what you are doing.
@@ -81,12 +81,12 @@ Uninstall
 ~~~~~~~~~
 
 Removing a plugin involves two steps. The first one is to check if the plugin
-has applied any migrations on FlaskBB and if so you can
+has applied any migrations on Ekaayam and if so you can
 undo them via::
 
     $ flaskbb db downgrade <plugin_name>@base
 
-The second step is to wipe the settings from FlaskBB which can be done in the
+The second step is to wipe the settings from Ekaayam which can be done in the
 Admin Panel or by running::
 
     $ flaskbb plugins uninstall <plugin_name>

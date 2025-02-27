@@ -5,7 +5,7 @@ flaskbb.cli.translations
 
 This module contains all translation commands.
 
-:copyright: (c) 2016 by the FlaskBB Team.
+:copyright: (c) 2016 by the Ekaayam Team.
 :license: BSD, see LICENSE for more details.
 """
 

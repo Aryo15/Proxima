@@ -8,7 +8,7 @@
 # Vinícius Ferreira <vinidotnet@hotmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: FlaskBB\n"
+"Project-Id-Version: Ekaayam\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-05-03 12:13+0200\n"
 "PO-Revision-Date: 2018-05-03 10:17+0000\n"
@@ -986,8 +986,8 @@ msgstr "O plugin %(plugin)s já foi habilitado."
 
 #: flaskbb/management/views.py:963
 #, python-format
-msgid "Plugin %(plugin)s enabled. Please restart FlaskBB now."
-msgstr "Plugin %(plugin)s habilitado. Por favor reinicie o FlaskBB agora."
+msgid "Plugin %(plugin)s enabled. Please restart Ekaayam now."
+msgstr "Plugin %(plugin)s habilitado. Por favor reinicie o Ekaayam agora."
 
 #: flaskbb/management/views.py:980
 #, python-format
@@ -996,8 +996,8 @@ msgstr ""
 
 #: flaskbb/management/views.py:988
 #, python-format
-msgid "Plugin %(plugin)s disabled. Please restart FlaskBB now."
-msgstr "Plugin %(plugin)s desabilitado. Por favor reinicie o FlaskBB agora."
+msgid "Plugin %(plugin)s disabled. Please restart Ekaayam now."
+msgstr "Plugin %(plugin)s desabilitado. Por favor reinicie o Ekaayam agora."
 
 #: flaskbb/management/views.py:1004
 msgid "Plugin has been uninstalled."

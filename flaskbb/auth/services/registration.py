@@ -5,7 +5,7 @@ flaskbb.auth.services
 
 Implementation of services found in flaskbb.core.auth.services
 
-:copyright: (c) 2014-2018 the FlaskBB Team.
+:copyright: (c) 2014-2018 the Ekaayam Team.
 :license: BSD, see LICENSE for more details
 """
 
@@ -182,7 +182,7 @@ class AutoActivateUserPostProcessor(RegistrationPostProcessor):
 
 class RegistrationService(UserRegistrationService):
     """
-    Default registration service for FlaskBB, runs the registration information
+    Default registration service for Ekaayam, runs the registration information
     against the provided validators and if it passes, creates the user.
 
     If any of the provided

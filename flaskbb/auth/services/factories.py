@@ -2,11 +2,11 @@
 """
 flaskbb.auth.services.factories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Factory functions for various FlaskBB auth services
+Factory functions for various Ekaayam auth services
 
 These factories are provisional.
 
-:copyright: 2014-2018 the FlaskBB Team.
+:copyright: 2014-2018 the Ekaayam Team.
 :license: BSD, see LICENSE for more details
 """
 
@@ -15,7 +15,7 @@ from datetime import timedelta
 from flask import current_app
 
 from ...extensions import db
-from ...tokens import FlaskBBTokenSerializer
+from ...tokens import EkaayamTokenSerializer
 from ...tokens.verifiers import EmailMatchesUserToken
 from ...user.models import User
 from .activation import AccountActivator
@@ -30,7 +30,7 @@ def registration_service_factory():
 
 
 def reset_service_factory():
-    token_serializer = FlaskBBTokenSerializer(
+    token_serializer = EkaayamTokenSerializer(
         current_app.config["SECRET_KEY"], expiry=timedelta(hours=1)
     )
     verifiers = [EmailMatchesUserToken(User)]
@@ -38,7 +38,7 @@ def reset_service_factory():
 
 
 def account_activator_factory():
-    token_serializer = FlaskBBTokenSerializer(
+    token_serializer = EkaayamTokenSerializer(
         current_app.config["SECRET_KEY"], expiry=timedelta(hours=1)
     )
     return AccountActivator(token_serializer, User)

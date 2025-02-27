@@ -7,7 +7,7 @@
 # krestenjacobsen <kresten@logiskhave.dk>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: FlaskBB\n"
+"Project-Id-Version: Ekaayam\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-05-03 12:13+0200\n"
 "PO-Revision-Date: 2018-05-03 10:17+0000\n"
@@ -985,7 +985,7 @@ msgstr ""
 
 #: flaskbb/management/views.py:963
 #, python-format
-msgid "Plugin %(plugin)s enabled. Please restart FlaskBB now."
+msgid "Plugin %(plugin)s enabled. Please restart Ekaayam now."
 msgstr ""
 
 #: flaskbb/management/views.py:980
@@ -995,7 +995,7 @@ msgstr ""
 
 #: flaskbb/management/views.py:988
 #, python-format
-msgid "Plugin %(plugin)s disabled. Please restart FlaskBB now."
+msgid "Plugin %(plugin)s disabled. Please restart Ekaayam now."
 msgstr ""
 
 #: flaskbb/management/views.py:1004
