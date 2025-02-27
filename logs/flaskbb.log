@@ -2602,3 +2602,201 @@ Traceback (most recent call last):
     .paginate(page, flaskbb_config["TOPICS_PER_PAGE"], True)
      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 TypeError: Query.paginate() takes 1 positional argument but 4 were given
+2025-02-27 23:35:11,187 ERROR   flaskbb                   Exception on /portal/ [GET]
+Traceback (most recent call last):
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/portal/views.py", line 49, in index
+    .paginate(page, flaskbb_config["TOPICS_PER_PAGE"], True)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 4 were given
+2025-02-27 23:46:59,971 ERROR   flaskbb.cli.main          Error while loading CLI Plugins
+Traceback (most recent call last):
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/cli/main.py", line 64, in _load_flaskbb_plugins
+    app = ctx.ensure_object(ScriptInfo).load_app()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/cli.py", line 342, in load_app
+    app = self.create_app()
+          ^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/cli/main.py", line 93, in make_app
+    return create_app(config_file, instance_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/app.py", line 132, in create_app
+    configure_extensions(app)
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/app.py", line 272, in configure_extensions
+    redis_store.init_app(app)
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask_redis/client.py", line 37, in init_app
+    self._redis_client = self.provider_class.from_url(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/client.py", line 145, in from_url
+    connection_pool = ConnectionPool.from_url(url, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/connection.py", line 1274, in from_url
+    url_options = parse_url(url)
+                  ^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/connection.py", line 1168, in parse_url
+    raise ValueError(
+ValueError: Redis URL must specify one of the following schemes (redis://, rediss://, unix://)
+2025-02-27 23:49:26,643 ERROR   flaskbb.cli.main          Error while loading CLI Plugins
+Traceback (most recent call last):
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/cli/main.py", line 64, in _load_flaskbb_plugins
+    app = ctx.ensure_object(ScriptInfo).load_app()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/cli.py", line 342, in load_app
+    app = self.create_app()
+          ^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/cli/main.py", line 93, in make_app
+    return create_app(config_file, instance_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/app.py", line 132, in create_app
+    configure_extensions(app)
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/app.py", line 272, in configure_extensions
+    redis_store.init_app(app)
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask_redis/client.py", line 37, in init_app
+    self._redis_client = self.provider_class.from_url(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/client.py", line 145, in from_url
+    connection_pool = ConnectionPool.from_url(url, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/connection.py", line 1274, in from_url
+    url_options = parse_url(url)
+                  ^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/connection.py", line 1168, in parse_url
+    raise ValueError(
+ValueError: Redis URL must specify one of the following schemes (redis://, rediss://, unix://)
+2025-02-27 23:49:38,395 ERROR   flaskbb.cli.main          Error while loading CLI Plugins
+Traceback (most recent call last):
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/cli/main.py", line 64, in _load_flaskbb_plugins
+    app = ctx.ensure_object(ScriptInfo).load_app()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/cli.py", line 342, in load_app
+    app = self.create_app()
+          ^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/cli/main.py", line 93, in make_app
+    return create_app(config_file, instance_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/app.py", line 132, in create_app
+    configure_extensions(app)
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/app.py", line 272, in configure_extensions
+    redis_store.init_app(app)
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask_redis/client.py", line 37, in init_app
+    self._redis_client = self.provider_class.from_url(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/client.py", line 145, in from_url
+    connection_pool = ConnectionPool.from_url(url, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/connection.py", line 1274, in from_url
+    url_options = parse_url(url)
+                  ^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/connection.py", line 1168, in parse_url
+    raise ValueError(
+ValueError: Redis URL must specify one of the following schemes (redis://, rediss://, unix://)
+2025-02-27 23:50:18,215 ERROR   flaskbb.cli.main          Error while loading CLI Plugins
+Traceback (most recent call last):
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/cli/main.py", line 64, in _load_flaskbb_plugins
+    app = ctx.ensure_object(ScriptInfo).load_app()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/cli.py", line 342, in load_app
+    app = self.create_app()
+          ^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/cli/main.py", line 93, in make_app
+    return create_app(config_file, instance_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/app.py", line 132, in create_app
+    configure_extensions(app)
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/app.py", line 272, in configure_extensions
+    redis_store.init_app(app)
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask_redis/client.py", line 37, in init_app
+    self._redis_client = self.provider_class.from_url(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/client.py", line 145, in from_url
+    connection_pool = ConnectionPool.from_url(url, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/connection.py", line 1274, in from_url
+    url_options = parse_url(url)
+                  ^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/connection.py", line 1168, in parse_url
+    raise ValueError(
+ValueError: Redis URL must specify one of the following schemes (redis://, rediss://, unix://)
+2025-02-27 23:50:32,080 ERROR   flaskbb.cli.main          Error while loading CLI Plugins
+Traceback (most recent call last):
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/cli/main.py", line 64, in _load_flaskbb_plugins
+    app = ctx.ensure_object(ScriptInfo).load_app()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/cli.py", line 342, in load_app
+    app = self.create_app()
+          ^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/cli/main.py", line 93, in make_app
+    return create_app(config_file, instance_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/app.py", line 132, in create_app
+    configure_extensions(app)
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/app.py", line 272, in configure_extensions
+    redis_store.init_app(app)
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask_redis/client.py", line 37, in init_app
+    self._redis_client = self.provider_class.from_url(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/client.py", line 145, in from_url
+    connection_pool = ConnectionPool.from_url(url, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/connection.py", line 1274, in from_url
+    url_options = parse_url(url)
+                  ^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/connection.py", line 1168, in parse_url
+    raise ValueError(
+ValueError: Redis URL must specify one of the following schemes (redis://, rediss://, unix://)
+2025-02-27 23:50:49,628 ERROR   flaskbb.cli.main          Error while loading CLI Plugins
+Traceback (most recent call last):
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/cli/main.py", line 64, in _load_flaskbb_plugins
+    app = ctx.ensure_object(ScriptInfo).load_app()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/cli.py", line 342, in load_app
+    app = self.create_app()
+          ^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/cli/main.py", line 93, in make_app
+    return create_app(config_file, instance_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/app.py", line 132, in create_app
+    configure_extensions(app)
+  File "/home/aryan/lastgasp/flaskbb/flaskbb/app.py", line 272, in configure_extensions
+    redis_store.init_app(app)
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask_redis/client.py", line 37, in init_app
+    self._redis_client = self.provider_class.from_url(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/client.py", line 145, in from_url
+    connection_pool = ConnectionPool.from_url(url, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/connection.py", line 1274, in from_url
+    url_options = parse_url(url)
+                  ^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/redis/connection.py", line 1168, in parse_url
+    raise ValueError(
+ValueError: Redis URL must specify one of the following schemes (redis://, rediss://, unix://)
+2025-02-28 00:39:54,648 ERROR   flaskbb                   Exception on /portal/ [GET]
+Traceback (most recent call last):
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aryan/lastgasp/flaskbb/.venv/lib/python3.11/site-packages/portal/views.py", line 49, in index
+    .paginate(page, flaskbb_config["TOPICS_PER_PAGE"], True)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.paginate() takes 1 positional argument but 4 were given
